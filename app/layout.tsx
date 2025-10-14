@@ -1,9 +1,9 @@
 import './globals.css'
 import Link from 'next/link'
-import { Inter, Newsreader } from 'next/font/google'
+import { Zilla_Slab, Source_Sans_3 } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
-const newsreader = Newsreader({ subsets: ['latin'] })
+const zilla = Zilla_Slab({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-head' })
+const sourceSans = Source_Sans_3({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-body' })
 
 export const metadata = {
   title: 'Ateliér Libušín',
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-  <body className={`${inter.variable}`}> 
+  <body className={`${zilla.variable} ${sourceSans.variable} font-sans bg-page text-ink`}>
         <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b">
           <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
             <Link href="/" className="font-semibold tracking-wide">Ateliér Libušín</Link>

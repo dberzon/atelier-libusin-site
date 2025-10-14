@@ -10,13 +10,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#111111',
-        sand: '#F8F4EC',
-        accent: '#0F766E' // teal-700 vibe
+        ink: '#121212',
+        guardianBlue: '#052962',
+        guardianYellow: '#ffe500',
+        page: '#ffffff',
+        paper: '#f6f6f6'
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'Inter'],
-        serif: ['var(--font-serif)', 'ui-serif', 'Georgia']
+        sans: ['var(--font-body)', 'ui-sans-serif', 'system-ui', 'Inter'],
+        serif: ['var(--font-head)', 'ui-serif', 'Georgia']
       },
       borderRadius: {
         'xl': '1rem',
