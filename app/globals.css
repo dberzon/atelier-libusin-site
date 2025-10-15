@@ -6,15 +6,21 @@
   color-scheme: light;
 }
 
-body {
-  background-color: #fdf6e3; /* cream */
-  color: #222; /* ink */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-/* Optional: nicer links in prose blocks */
-.prose a {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
+body { @apply bg-surface text-ink antialiased; }
+.prose { @apply max-w-3xl; }
+.prose h1,.prose h2,.prose h3 { @apply font-serif; }
+.prose a { @apply underline underline-offset-4 text-brand hover:no-underline; }
+
+/* Buttons */
+.btn { @apply inline-block px-4 py-2 rounded-2xl border border-border transition bg-surface; }
+.btn:hover { @apply shadow-card; }
+.btn-primary { @apply bg-brand text-white border-transparent; }
+.btn-primary:hover { filter: brightness(0.95); }
+
+/* Cards */
+
+.card { @apply p-6 rounded-2xl border border-border bg-surface hover:shadow-card transition; }
+
+/* Accessibility focus style */
+:focus-visible { outline: 2px solid #052962; outline-offset: 3px; }

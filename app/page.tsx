@@ -14,7 +14,7 @@ export default function Page() {
 
       <section className="grid md:grid-cols-3 gap-6">
         {links.map((c) => (
-          <Link key={c.title} href={c.href} className="block p-6 rounded-2xl border hover:shadow-md transition">
+          <Link key={c.title} href={c.href} className="card">
             <h3 className="font-semibold mb-2">{c.title}</h3>
             <p className="opacity-80 text-sm">{c.desc}</p>
           </Link>
