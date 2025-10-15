@@ -7,7 +7,7 @@ export default function Hero() {
         <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
           Welcome to Ateliér Libušín
         </h1>
-        <p className="text-lg opacity-90">
+        <p className="text-lg opacity-90 max-w-prose">
           Nestled in the serene countryside just outside Prague, Czech Republic,
           Ateliér Libušín is a vibrant creative haven dedicated to artistic exploration,
           collaboration, and residency programs. Founded by artists <strong>Dmitri Berzon</strong> and

@@ -7,11 +7,14 @@
 
 
 /* Custom brand/accent/radius variables for theme */
+/* Design tokens and theme variables */
 :root {
   color-scheme: light;
-  --brand: #052962;   /* header & primary buttons */
-  --accent: #ffe500;  /* highlights/underline */
-  --radius: 16px;     /* corners for cards/buttons */
+  --brand: #052962;
+  --accent: #ffe500;
+  --radius: 16px;
+  --surface: #ffffff;
+  --ink: #121212;
   /* ...existing oklch variables... */
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -94,10 +97,13 @@ body {
 .prose h1, .prose h2, .prose h3 {
   font-family: var(--font-head, Georgia, serif);
 }
+
+
 .prose a {
   text-decoration: underline;
   text-underline-offset: 4px;
-  color: var(--brand, #052962);
+  color: var(--brand);
+  text-decoration-color: var(--accent);
 }
 .prose a:hover {
   text-decoration: none;
@@ -125,8 +131,19 @@ body {
 /* Cards */
 
 
+
+
 .card {
   border-radius: var(--radius);
+  border: 1px solid var(--border, #e5e7eb);
+  background: var(--surface);
+  transition: box-shadow .2s, transform .06s;
+}
+.card:hover {
+  box-shadow: 0 6px 28px rgba(0,0,0,.08);
+}
+.card:active {
+  transform: translateY(1px);
 }
 
 /* Accessibility focus style */

@@ -22,6 +22,7 @@ export default function Nav() {
           <Link
             key={link.href}
             href={link.href}
+            aria-current={active ? 'page' : undefined}
             className={`pb-1 hover:opacity-80 ${active ? 'border-b-2 border-brandAccent' : 'border-b-2 border-transparent'}`}
           >
             {link.label}
