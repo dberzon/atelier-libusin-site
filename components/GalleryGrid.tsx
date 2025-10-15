@@ -38,7 +38,7 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
         ))}
       </div>
 
-      <Lightbox items={items} index={index} onCloseAction={close} onPrevAction={prev} onNextAction={next} />
+  <Lightbox items={items} index={index} onCloseAction={close} onPrevAction={prev} onNextAction={next} />
     </>
   )
 }

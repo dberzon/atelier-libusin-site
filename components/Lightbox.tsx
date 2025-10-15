@@ -15,28 +15,28 @@ type Item = {
 export default function Lightbox({
   items,
   index,
-  onClose,
-  onPrev,
-  onNext,
+  onCloseAction,
+  onPrevAction,
+  onNextAction,
 }: {
   items: Item[];
   index: number | null;
-  onClose: () => void;
-  onPrev: () => void;
-  onNext: () => void;
+  onCloseAction: () => void;
+  onPrevAction: () => void;
+  onNextAction: () => void;
 }) {
-  const open = index !== null;
+  const open = index !== null; // Check if the lightbox is open
   const item = open ? items[index!] : null;
   const dialogRef = useRef<HTMLDivElement>(null);
 
   const onKey = useCallback(
     (e: KeyboardEvent) => {
       if (!open) return;
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowLeft") onPrev();
-      if (e.key === "ArrowRight") onNext();
+      if (e.key === "Escape") onCloseAction();
+      if (e.key === "ArrowLeft") onPrevAction();
+      if (e.key === "ArrowRight") onNextAction();
     },
-    [open, onClose, onPrev, onNext]
+    [open, onCloseAction, onPrevAction, onNextAction]
   );
 
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function Lightbox({
       <button
         aria-label="Close"
         className="absolute top-4 right-4 text-white/90 hover:text-white text-3xl leading-none"
-        onClick={onClose}
+        onClick={onCloseAction}
       >
         ×
       </button>
@@ -91,7 +91,7 @@ export default function Lightbox({
       <button
         aria-label="Previous"
         className="absolute left-3 md:left-6 text-white/80 hover:text-white text-3xl select-none"
-        onClick={onPrev}
+        onClick={onPrevAction}
       >
         ‹
       </button>
@@ -122,7 +122,7 @@ export default function Lightbox({
       <button
         aria-label="Next"
         className="absolute right-3 md:right-6 text-white/80 hover:text-white text-3xl select-none"
-        onClick={onNext}
+        onClick={onNextAction}
       >
         ›
       </button>

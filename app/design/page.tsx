@@ -1,22 +1,21 @@
-"use client"
+
+
+'use client'
 import { useEffect, useState } from 'react'
-import styles from './design-tuner.module.css'
 
 export default function DesignTuner() {
   const [brand, setBrand]   = useState('#052962')
   const [accent, setAccent] = useState('#ffe500')
   const [radius, setRadius] = useState(16)
 
-  // Load saved settings
   useEffect(() => {
-    const b = localStorage.getItem('brand')   || brand
-    const a = localStorage.getItem('accent')  || accent
+    const b = (localStorage.getItem('brand')  || brand) as string
+    const a = (localStorage.getItem('accent') || accent) as string
     const r = Number(localStorage.getItem('radius') || radius)
-    setBrand(b as string); setAccent(a as string); setRadius(r)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    setBrand(b); setAccent(a); setRadius(r)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Apply to CSS variables
   useEffect(() => {
     const root = document.documentElement
     root.style.setProperty('--brand', brand)
@@ -29,41 +28,36 @@ export default function DesignTuner() {
 
   const reset = () => {
     setBrand('#052962'); setAccent('#ffe500'); setRadius(16)
-    localStorage.removeItem('brand'); localStorage.removeItem('accent'); localStorage.removeItem('radius')
+    localStorage.removeItem('brand')
+    localStorage.removeItem('accent')
+    localStorage.removeItem('radius')
   }
 
   return (
     <section className="prose max-w-none">
       <h1>Design Tuner</h1>
-      <p>Play with brand color, accent, and corner radius. Changes apply instantly and persist in your browser.</p>
+      <p>Tweak brand color, accent, and corner radius. Changes apply instantly and persist in your browser.</p>
 
       <div className="grid md:grid-cols-2 gap-6">
         <div className="p-6 border rounded-2xl">
-          <label htmlFor="brand-color" className="block text-sm mb-2">Brand color</label>
-          <div className={`mt-4 p-4 rounded-[var(--radius)] text-white ${styles.brandPreview}`}>
+          <label className="block text-sm mb-2">Brand color</label>
+          <input type="color" value={brand} onChange={(e) => setBrand(e.target.value)} />
+          <div className="mt-4 p-4 rounded-[var(--radius)] text-white" style={{ background: 'var(--brand)' }}>
             Header / Primary button preview
           </div>
         </div>
 
         <div className="p-6 border rounded-2xl">
-          <label htmlFor="accent-color" className="block text-sm mb-2">Accent color</label>
-          <div className={`mt-4 underline underline-offset-4 ${styles.accentUnderline}`}>
+          <label className="block text-sm mb-2">Accent color</label>
+          <input type="color" value={accent} onChange={(e) => setAccent(e.target.value)} />
+          <div className="mt-4 underline underline-offset-4" style={{ textDecorationColor: 'var(--accent)' }}>
             Link/underline preview
           </div>
         </div>
 
         <div className="p-6 border rounded-2xl">
-          <label htmlFor="radius-range" className="block text-sm mb-2">Corner radius: {radius}px</label>
-          <input
-            id="radius-range"
-            type="range"
-            min={4}
-            max={32}
-            step={1}
-            value={radius}
-            title={`Corner radius ${radius}px`}
-            onChange={(e) => setRadius(Number(e.target.value))}
-          />
+          <label className="block text-sm mb-2">Corner radius: {radius}px</label>
+          <input type="range" min={4} max={32} step={1} value={radius} onChange={(e) => setRadius(Number(e.target.value))} />
           <div className="mt-4 grid grid-cols-3 gap-3">
             <div className="h-16 border rounded-[var(--radius)]"></div>
             <div className="h-16 border rounded-[var(--radius)]"></div>
@@ -75,8 +69,6 @@ export default function DesignTuner() {
           <button className="btn btn-primary" onClick={reset}>Reset to defaults</button>
         </div>
       </div>
-
-      <p className="text-sm opacity-70 mt-6">Tip: keep contrast AA compliant when changing colors.</p>
     </section>
   )
 }
