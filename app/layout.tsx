@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${zilla.variable} ${sourceSans.variable} font-sans`}>
-        <header className="sticky top-0 z-50 bg-brand text-white">
+        <header className="sticky top-0 z-50 text-white bg-[var(--brand)]">
           <nav className="container py-3 flex items-center justify-between">
             <Link href="/" className="font-semibold tracking-wide">Ateliér Libušín</Link>
             <Nav />
