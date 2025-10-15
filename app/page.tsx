@@ -1,30 +1,19 @@
+
+
+import Hero from '../components/Hero'
 import Link from 'next/link'
-
-function Hero({ subtitle }: { subtitle?: string }) {
-  return (
-    <header className="py-12">
-      <h1 className="text-4xl font-bold">Ateliér Libušín</h1>
-      {subtitle && <p className="mt-2 opacity-80">{subtitle}</p>}
-    </header>
-  )
-}
-
 export default function Page() {
+  const links = [
+    { title: 'Residency', href: '/residency', desc: '1–4 week artist-led residencies; who we host, what we provide, and how to apply.' },
+    { title: 'Facilities', href: '/facilities', desc: 'Studio, accommodations, projection resources and outdoor pavilion.' },
+    { title: 'Timeline', href: '/timeline', desc: 'Selected highlights 2002—2025 from residencies, festivals and workshops.' },
+  ];
   return (
     <div className="space-y-16">
       <Hero />
 
       <section className="grid md:grid-cols-3 gap-6">
-        {[{
-          title: 'Residency', href: '/residency',
-          desc: 'Who we host, what we provide (workspace, countryside garden, projection walls), and how to apply.'
-        },{
-          title: 'Facilities', href: '/facilities',
-          desc: 'Studio specs, projector for Tagtool/live drawing, accommodation notes, travel from Prague.'
-        },{
-          title: 'Timeline', href: '/timeline',
-          desc: 'Selected highlights from 2007—2025 including residencies, festivals and workshops.'
-        }].map((c) => (
+        {links.map((c) => (
           <Link key={c.title} href={c.href} className="block p-6 rounded-2xl border hover:shadow-md transition">
             <h3 className="font-semibold mb-2">{c.title}</h3>
             <p className="opacity-80 text-sm">{c.desc}</p>
@@ -34,7 +23,8 @@ export default function Page() {
 
       <section className="prose max-w-none">
         <h2>About Ateliér Libušín</h2>
-        <p>Founded by artists Dmitri Berzon and Frances Sander, Ateliér Libušín is an artist-run studio and micro-residency in Libušín (near Prague). Over the years we have hosted collaborative workshops, projection drawing sessions, and visiting artists, including OMAi / Tagtool collectives and guests from across Europe.</p>
+        <p>Ateliér Libušín is a small, artist-run studio and micro-residency in Libušín (near Prague). Originally formed as Ateliér Libušín s.r.o., we later dissolved the company to evolve more flexibly as an artist-led initiative. We continue to steward the same property, with a dedicated studio and extensions designed for residents and collaborative work.</p>
+        <p>Our roots are in the Czech arts landscape. Over two decades, we have developed the site into a hub for interdisciplinary projects—projection drawing, performance, experimental film and sound—often welcoming guests from across Europe. The orchard is both resource and metaphor, hosting informal gatherings and occasional outdoor projections.</p>
       </section>
     </div>
   )

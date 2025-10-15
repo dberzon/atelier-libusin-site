@@ -1,20 +1,27 @@
+
+
 export const metadata = { title: 'Residency — Ateliér Libušín' }
 
 export default function Residency() {
   return (
     <article className="prose max-w-none">
       <h1>Residency</h1>
-      <p><strong>Format:</strong> Short, focused residencies (typically 3–14 days) for individual artists or small collectives. Self-directed work periods with light mentoring and occasional open-studio formats.</p>
-      <p><strong>Disciplines:</strong> Performance, live drawing/Tagtool, experimental film & micro‑cinema, projection, sound/music, movement, puppetry/object theatre, and interdisciplinary practices.</p>
-      <p><strong>What we offer:</strong> Workspace in a flexible studio with projection wall, garden/orchard access, basic tools, rural calm; informal feedback from the hosts; documentation support (photo/video) by arrangement.</p>
-      <p><strong>Accommodation:</strong> Simple on‑site or nearby options depending on project and season. Families welcome by prior arrangement.</p>
-      <p><strong>Fees & support:</strong> We do not currently offer paid grants; many residents bring external funding (e.g. Visegrad Fund, national arts councils, universities). We can issue invitation letters.</p>
+      <p><strong>Format:</strong> Artist-led, focused residencies for <strong>1–4 weeks</strong> for individuals or small groups. We welcome visual artists, performers, musicians and interdisciplinary creators.</p>
+      <p><strong>Capacity:</strong> Up to <strong>8 people</strong>; small groups or individual stays depending on season and logistics.</p>
+      <p><strong>What we offer:</strong> Private or shared studio time in a light-filled atelier; projection-ready walls and outdoor options; access to Tagtool/live drawing set-ups; basic sound gear; documentation support by arrangement; informal mentoring by hosts <strong>Dmitri Berzon</strong> & <strong>Frances Sander</strong>; connections to Prague networks for guest feedback.</p>
+      <p><strong>Outcomes:</strong> Optional open studio, garden showings, documentation for grant reports, or preparation for festivals/galleries.</p>
+      <p><strong>Fees &amp; support:</strong> <strong>Fees by arrangement.</strong> Many residents bring external funding (Visegrad Fund, national arts councils, universities). We can issue invitation letters.</p>
+
+      <h2>Eligibility & themes</h2>
+      <p>Open to emerging and mid-career artists worldwide. Priority to proposals engaging social, environmental or intercultural themes.</p>
+
       <h2>How to apply</h2>
       <ol>
-        <li>Email a short proposal (5–10 lines), preferred dates, and links to portfolio.</li>
-        <li>Tell us what you need: space, time, technical gear, collaborators.</li>
-        <li>Mention any partners/funders we should coordinate with.</li>
+        <li>Send a short proposal (1–2 pages) outlining your project, goals and preferred dates.</li>
+        <li>Include links to portfolio/CV and any technical or space needs.</li>
+        <li>If relevant, attach a grant outline or partners to coordinate with.</li>
       </ol>
+      <p><strong>Email:</strong> <a href="mailto:berzon73@gmail.com">berzon73@gmail.com</a></p>
       <p><em>Response time:</em> usually within one week.</p>
     </article>
   )
