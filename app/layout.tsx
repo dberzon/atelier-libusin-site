@@ -5,9 +5,11 @@ import { Zilla_Slab, Source_Sans_3 } from 'next/font/google'
 const zilla = Zilla_Slab({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-head' })
 const sourceSans = Source_Sans_3({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-body' })
 
+
 export const metadata = {
   title: 'Ateliér Libušín',
-  description: 'Artist-run studio & residency in Libušín, Czech Republic.'
+  description:
+    'Artist-run residency and studio near Prague — a tranquil, orchard-side space for focused work, collaboration, and grant-ready projects.'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
