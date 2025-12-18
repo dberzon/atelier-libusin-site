@@ -88,6 +88,7 @@ export default function Apply() {
         </div>
 
         {/* Smart Form Embed */}
+        {/* Smart Form Embed */}
         <div className="w-full bg-[#111] rounded-2xl overflow-hidden min-h-[600px] border border-white/10 relative shadow-2xl">
           <iframe
             data-tally-src="https://tally.so/embed/mBB09q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
@@ -95,13 +96,20 @@ export default function Apply() {
             width="100%"
             height="216"
             title="Residency Application"
-            className="w-full h-full border-0"
+            className="w-full h-full border-0 relative z-10"
           >
           </iframe>
 
           {/* Fallback / Loading State */}
-          <div className="absolute -z-10 inset-0 flex items-center justify-center flex-col opacity-30">
-            <p>Loading Secure Application Form...</p>
+          <div className="absolute inset-0 flex items-center justify-center flex-col z-0 p-8 text-center bg-[var(--bg-deep)]">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[var(--brand)] mb-6 opacity-80"></div>
+            <p className="text-white font-medium text-lg mb-2">Loading application form...</p>
+            <p className="text-[var(--text-muted)] text-sm">
+              If the form does not load securely within a few seconds, <br />
+              <a href="https://tally.so/r/mBB09q" target="_blank" rel="noopener noreferrer" className="text-[var(--brand)] underline hover:text-white transition-colors">
+                click here to open it directly
+              </a>.
+            </p>
           </div>
         </div>
         <Script id="tally-js" src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
