@@ -1,44 +1,4 @@
-        {/* Documentation and Accountability Section */}
-        <section>
-          <SectionHeader title="Documentation and accountability" className="mb-6" />
-          <p className="text-[var(--text-muted)] leading-relaxed">
-            Activities and outcomes can be documented for institutional partners and funding bodies. The residency maintains basic reporting structures suitable for grant-supported projects and international cooperation.
-          {/* Main Sections (max 4) */}
-          <div className="space-y-20">
-
-            {/* Cultural Continuity Section */}
-                <p>Knowledge and experience accumulate over time, benefiting both residents and the wider region.</p>
-              </div>
-            </section>
-
-            {/* Support for Artistic Practice Section */}
-            <section>
-              <SectionHeader title="Support for artistic practice" className="mb-6" />
-              <p className="text-[var(--text-muted)] leading-relaxed">
-                The residency provides artists with time, space, and autonomy to develop work that may not fit short production cycles. Emphasis is placed on process, research, and continuity rather than immediate public output.
-              </p>
-            </section>
-
-            {/* Local and International Context Section */}
-            <section>
-              <SectionHeader title="Local and international context" className="mb-6" />
-              <p className="text-[var(--text-muted)] leading-relaxed">
-                Located in a rural setting near Prague, Ateliér Libušín connects local context with international artistic networks. Visiting artists contribute to a shared environment shaped by place, exchange, and long-term collaboration.
-              </p>
-            </section>
-
-            {/* Documentation and Accountability Section */}
-            <section>
-              <SectionHeader title="Documentation and accountability" className="mb-6" />
-              <p className="text-[var(--text-muted)] leading-relaxed">
-                Activities and outcomes can be documented for institutional partners and funding bodies. The residency maintains basic reporting structures suitable for grant-supported projects and international cooperation.
-              </p>
-            </section>
-          </div>
-          <p className="text-[var(--text-muted)] leading-relaxed">
-            Located in a rural setting near Prague, Ateliér Libušín connects local context with international artistic networks. Visiting artists contribute to a shared environment shaped by place, exchange, and long-term collaboration.
-          </p>
-        </section>
+        // ...existing code...
 
         {/* Strategy Text */}
         <section className="grid md:grid-cols-2 gap-12 items-center">
