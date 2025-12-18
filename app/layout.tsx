@@ -1,8 +1,7 @@
 
 import './globals.css'
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import Nav from '../components/Nav'
+import Header from '../components/Header'
 import { Zilla_Slab, Source_Sans_3 } from 'next/font/google'
 
 const zilla = Zilla_Slab({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-head' })
@@ -16,14 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${zilla.variable} ${sourceSans.variable} font-sans`}>
-        <header className="sticky top-0 z-50 bg-[var(--glass)] backdrop-blur-md border-b border-white/5 transition-all duration-300">
-          <nav className="container py-4 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold tracking-tight text-white hover:text-[var(--brand)] transition-colors">
-              Ateliér Libušín
-            </Link>
-            <Nav />
-          </nav>
-        </header>
+        <Header />
 
         <main className="container py-10">{children}</main>
 

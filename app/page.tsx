@@ -24,29 +24,42 @@ export default function Page() {
     <div className="space-y-24 pb-20">
       <Hero />
 
-      {/* Grant Strategy Hooks */}
-      <section className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-        {links.map((c) => (
-          <Link key={c.title} href={c.href} className="card group">
-            <h3 className="text-xl font-light text-white mb-3 group-hover:text-[#00f0ff] transition-colors">{c.title}</h3>
-            <p className="text-sm leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">{c.desc}</p>
-          </Link>
-        ))}
+      {/* Grant Strategy Hooks - Design System Grid */}
+      <section className="container max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          {links.map((c) => (
+            <Link key={c.title} href={c.href} className="col-span-1 md:col-span-4 card group flex flex-col h-full border border-white/5 hover:border-[var(--brand)] transition-colors duration-300">
+              <h3 className="text-2xl font-light text-[var(--text-main)] mb-4 group-hover:text-[var(--brand)] transition-colors font-serif">
+                {c.title}
+              </h3>
+              <p className="text-base leading-relaxed text-[var(--text-muted)] group-hover:text-[var(--text-main)] transition-colors flex-grow">
+                {c.desc}
+              </p>
+              <div className="mt-6 pt-6 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-[var(--brand)] font-medium uppercase tracking-wider flex items-center gap-2">
+                Learn More <span>→</span>
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
 
-      {/* Intro Text */}
-      <section className="prose mx-auto text-center px-4">
-        <h2 className="text-3xl text-white font-light">A Gateway for European Culture</h2>
-        <p>
-          Ateliér Libušín is an independent cultural station operating as a <strong>zapsaný spolek (z.s.)</strong>.
-          Located just 35 minutes from Prague, we bridge the gap between urban presentation and rural experimentation.
-        </p>
-        <p>
-          We are a "Qualified Host" for major EU funding bodies, offering specialized support for
-          <span className="text-[#00f0ff]"> digital arts</span>,
-          <span className="text-[#ff0055]"> light performance</span>, and
-          <span className="text-green-400"> ecological research</span>.
-        </p>
+      {/* Intro Text - generous spacing */}
+      <section className="container max-w-4xl mx-auto px-6 text-center py-[var(--section-gap)]">
+        <h2 className="text-4xl md:text-5xl text-[var(--text-main)] font-light mb-8 font-serif leading-tight">
+          A Gateway for European Culture
+        </h2>
+        <div className="prose prose-lg prose-invert mx-auto">
+          <p className="text-xl md:text-2xl text-[var(--text-muted)] font-light leading-relaxed mb-8">
+            Ateliér Libušín is an independent cultural station operating as a <strong className="text-white">zapsaný spolek (z.s.)</strong>.
+            Located just 35 minutes from Prague, we bridge the gap between urban presentation and rural experimentation.
+          </p>
+          <p className="text-lg text-[var(--text-muted)]">
+            We are a "Qualified Host" for major EU funding bodies, offering specialized support for
+            <span className="text-[var(--brand)] font-medium mx-1">digital arts</span>,
+            <span className="text-[var(--accent)] font-medium mx-1">light performance</span>, and
+            <span className="text-[var(--phosphor)] font-medium mx-1">ecological research</span>.
+          </p>
+        </div>
       </section>
     </div>
   )
