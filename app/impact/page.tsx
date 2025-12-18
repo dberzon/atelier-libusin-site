@@ -1,3 +1,10 @@
+        {/* Documentation and Accountability Section */}
+        <section>
+          <SectionHeader title="Documentation and accountability" className="mb-6" />
+          <p className="text-[var(--text-muted)] leading-relaxed">
+            Activities and outcomes can be documented for institutional partners and funding bodies. The residency maintains basic reporting structures suitable for grant-supported projects and international cooperation.
+          </p>
+        </section>
 import type { Metadata } from 'next'
 import ArchiveGrid from '@/components/impact/ArchiveGrid'
 import SectionHeader from '../../components/ui/SectionHeader'
@@ -9,49 +16,67 @@ export default function Impact() {
   return (
     <div className="container max-w-6xl mx-auto px-6 py-24 space-y-24">
 
-      {/* 1. Hero-Lite Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-8 pt-12 pb-8">
-        <span className="text-[var(--brand)] font-medium tracking-widest uppercase text-xs">Analysis</span>
-        <h1 className="text-5xl md:text-6xl font-serif font-bold text-white">Cultural Impact</h1>
+      {/* Hero-Lite Section */}
+      <section className="max-w-3xl mx-auto pt-16 pb-10 text-center space-y-6">
+        <h1 className="text-5xl md:text-6xl font-serif font-bold text-white">Impact</h1>
         <p className="text-xl text-[var(--text-muted)] leading-relaxed max-w-2xl mx-auto">
-          Measuring our contribution to the regional cultural ecosystem and the international careers of our alumni.
+          Ateliér Libušín operates as a long-term cultural site, supporting artistic research, production, and continuity beyond individual residencies.
         </p>
+      </section>
+
+      {/* Key Points Strip */}
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 py-6 border-y border-white/10 text-center">
+        <div className="px-2">
+          <span className="block text-sm text-white font-medium">Long-term cultural site</span>
+        </div>
+        <div className="px-2">
+          <span className="block text-sm text-white font-medium">International artistic exchange</span>
+        </div>
+        <div className="px-2">
+          <span className="block text-sm text-white font-medium">Support for independent practice</span>
+        </div>
+        <div className="px-2">
+          <span className="block text-sm text-white font-medium">Rural–urban cultural link</span>
+        </div>
+        <div className="px-2">
+          <span className="block text-sm text-white font-medium">EU-grant compatible operations</span>
+        </div>
       </div>
 
-      {/* 2. Key Points Strip */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-white/10 text-center">
-        <div className="space-y-2">
-          <div className="text-2xl opacity-50">🏟️</div>
-          <div>
-            <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider mb-1">Events</span>
-            <span className="block text-white font-medium">24+ Public Events</span>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <div className="text-2xl opacity-50">👥</div>
-          <div>
-            <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider mb-1">Alumni</span>
-            <span className="block text-white font-medium">40+ Artists Hosted</span>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <div className="text-2xl opacity-50">📈</div>
-          <div>
-            <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider mb-1">Reach</span>
-            <span className="block text-white font-medium">2,000+ Visitors</span>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <div className="text-2xl opacity-50">🌍</div>
-          <div>
-            <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider mb-1">Region</span>
-            <span className="block text-white font-medium">Central Bohemia</span>
-          </div>
-        </div>
-      </div>
 
       {/* 3. Main Sections */}
       <div className="space-y-20">
+
+
+        {/* Cultural Continuity Section */}
+        <section>
+          <SectionHeader title="Cultural continuity" className="mb-6" />
+          <p className="text-[var(--text-muted)] leading-relaxed mb-4">
+            Ateliér Libušín functions as a stable cultural site rather than a project-based initiative.
+          </p>
+          <div className="space-y-4 text-[var(--text-muted)]">
+            <p>Its long-term presence allows for sustained artistic development.</p>
+            <p>Repeated engagement with the site and community is possible over multiple years.</p>
+            <p>Knowledge and experience accumulate over time, benefiting both residents and the wider region.</p>
+          </div>
+        </section>
+
+
+        {/* Support for Artistic Practice Section */}
+        <section>
+          <SectionHeader title="Support for artistic practice" className="mb-6" />
+          <p className="text-[var(--text-muted)] leading-relaxed">
+            The residency provides artists with time, space, and autonomy to develop work that may not fit short production cycles. Emphasis is placed on process, research, and continuity rather than immediate public output.
+          </p>
+        </section>
+
+        {/* Local and International Context Section */}
+        <section>
+          <SectionHeader title="Local and international context" className="mb-6" />
+          <p className="text-[var(--text-muted)] leading-relaxed">
+            Located in a rural setting near Prague, Ateliér Libušín connects local context with international artistic networks. Visiting artists contribute to a shared environment shaped by place, exchange, and long-term collaboration.
+          </p>
+        </section>
 
         {/* Strategy Text */}
         <section className="grid md:grid-cols-2 gap-12 items-center">
