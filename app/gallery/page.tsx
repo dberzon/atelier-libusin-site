@@ -1,5 +1,6 @@
 import GalleryGrid, { GalleryItem } from '../../components/GalleryGrid'
 import type { Metadata } from 'next'
+import SectionHeader from '../../components/ui/SectionHeader'
 
 export const metadata: Metadata = { title: 'Gallery — Ateliér Libušín' }
 
@@ -12,11 +13,21 @@ const items: GalleryItem[] = [
 
 export default function GalleryPage() {
   return (
-    <section className="space-y-6">
-      <h1 className="text-2xl md:text-3xl font-semibold">Gallery</h1>
-      <p className="opacity-80 max-w-2xl">A selection of images from residencies, workshops and performances at Ateliér Libušín.</p>
-      <GalleryGrid items={items} />
-      <p className="text-sm opacity-60">Photo use by permission; please credit Ateliér Libušín or the named photographer.</p>
-    </section>
+    <div className="container max-w-7xl mx-auto px-6 py-24 space-y-16">
+      <SectionHeader
+        eyebrow="Archive"
+        title="Gallery"
+        subtitle "A selection of images from residencies, workshops, and performances at Ateliér Libušín."
+      align="center"
+      />
+
+      <div className="bg-[var(--bg-panel)] p-6 md:p-8 rounded-2xl border border-white/5">
+        <GalleryGrid items={items} />
+      </div>
+
+      <p className="text-center text-sm opacity-40 font-mono">
+        Photo use by permission; please credit Ateliér Libušín or the named photographer.
+      </p>
+    </div>
   )
 }
