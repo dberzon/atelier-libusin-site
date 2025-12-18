@@ -1,5 +1,7 @@
 
-export const metadata = { title: 'Hosts — Ateliér Libušín' }
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = { title: 'Hosts — Ateliér Libušín' }
 
 export default function Hosts() {
   return (

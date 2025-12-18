@@ -1,13 +1,13 @@
 
 import './globals.css'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '../components/Nav'
 import { Zilla_Slab, Source_Sans_3 } from 'next/font/google'
 
 const zilla = Zilla_Slab({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-head' })
 const sourceSans = Source_Sans_3({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-body' })
-
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Ateliér Libušín',
   description: 'Artist-run residency and studio near Prague — a tranquil, orchard-side space for focused work, collaboration, and grant-ready projects.'
 }

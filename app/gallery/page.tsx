@@ -1,6 +1,7 @@
 import GalleryGrid, { GalleryItem } from '../../components/GalleryGrid'
+import type { Metadata } from 'next'
 
-export const metadata = { title: 'Gallery — Ateliér Libušín' }
+export const metadata: Metadata = { title: 'Gallery — Ateliér Libušín' }
 
 const items: GalleryItem[] = [
   { src: '/gallery/01.jpg', width: 1600, height: 1200, alt: 'Outdoor projection in the garden', caption: 'Outdoor projection in the garden', year: 2023, credit: 'Ateliér Libušín' },

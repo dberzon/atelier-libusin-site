@@ -1,7 +1,9 @@
 
 
 
-export const metadata = { title: 'Contact — Ateliér Libušín' }
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = { title: 'Contact — Ateliér Libušín' }
 
 export default function Contact() {
   return (

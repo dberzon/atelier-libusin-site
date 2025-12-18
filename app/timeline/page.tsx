@@ -1,5 +1,7 @@
 
-export const metadata = { title: 'Timeline — Ateliér Libušín' }
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = { title: 'Timeline — Ateliér Libušín' }
 
 const items = [
   { year: 2025, title: 'Orpheus & Eurydice — audiovisual work with Ewa Żurakowska', link: '' },

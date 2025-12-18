@@ -1,5 +1,7 @@
 
-export const metadata = { title: 'Facilities — Ateliér Libušín' }
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = { title: 'Facilities — Ateliér Libušín' }
 
 export default function Facilities() {
   return (
