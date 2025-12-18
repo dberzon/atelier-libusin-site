@@ -14,6 +14,9 @@ export default function Impact() {
         <p className="text-xl text-[var(--text-muted)] leading-relaxed max-w-2xl mx-auto">
           Ateliér Libušín operates as a long-term cultural site, supporting artistic research, production, and continuity beyond individual residencies.
         </p>
+        <p className="text-[var(--text-muted)] text-base max-w-2xl mx-auto">
+          This long-term impact is sustained primarily through the residency program, which provides continuity, repetition, and accumulated practice over time.
+        </p>
       </section>
       {/* Key Points Strip */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 py-6 border-y border-white/10 text-center">
@@ -57,7 +60,7 @@ export default function Impact() {
         <section>
           <SectionHeader title="Local and international context" className="mb-6" />
           <p className="text-[var(--text-muted)] leading-relaxed">
-            Located in a rural setting near Prague, Ateliér Libušín connects local context with international artistic networks. Visiting artists contribute to a shared environment shaped by place, exchange, and long-term collaboration.
+            Located in a rural setting near Prague, Ateliér Libušín connects local context with international artistic networks, providing a shared environment shaped by place and exchange.
           </p>
         </section>
         {/* Documentation and Accountability Section */}
