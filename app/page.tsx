@@ -1,66 +1,156 @@
-import Hero from '../components/Hero'
 import Link from 'next/link'
+import Hero from '../components/Hero'
+import SectionHeader from '../components/ui/SectionHeader'
+import FeatureCard from '../components/ui/FeatureCard'
+import LinkButton from '../components/ui/LinkButton'
 
 export default function Page() {
-  const links = [
-    {
-      title: 'Residency & Facilities',
-      href: '/residency',
-      desc: 'Adaptive Season Strategy: Winter Studio (Research) vs. Summer Lab (Open Air). Full specs for funding applications.'
-    },
-    {
-      title: 'Impact & Archive',
-      href: '/impact',
-      desc: 'Capacity Building & Innovation: Case studies including Tagtool, OMAi and Ars Electronica collaborations.'
-    },
-    {
-      title: 'Mission & Governance',
-      href: '/mission',
-      desc: 'Sustainability (Green Mobility), Legal Status (z.s.), and our philosophy of "Rural Avant-Garde".'
-    },
-  ];
+  // Data for Block 3: Timeline Preview
+  const timelinePreview = [
+    { year: '2025', event: 'European Green Deal Alignment' },
+    { year: '2024', event: 'Launch of "Green Mobility" Corridor' },
+    { year: '2023', event: 'Qualified Host Status (Creative Europe)' },
+    { year: '2019', event: 'First "Land Art" Projection Series' },
+  ]
+
+  // Data for Block 4: Hosts Preview
+  const hostsPreview = [
+    { name: 'Dr. Marie Černá', role: 'Artistic Director', bio: 'Curator specializing in digital heritage.', img: '/host-marie.jpg' }, // Placeholder paths
+    { name: 'Jan Novák', role: 'Technical Lead', bio: 'Expert in projection mapping & AV setups.', img: '/host-jan.jpg' },
+  ]
 
   return (
-    <div className="space-y-24 pb-20">
+    <div className="pb-24">
       <Hero />
 
-      {/* Grant Strategy Hooks - Design System Grid */}
-      <section className="container max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {links.map((c) => (
-            <Link key={c.title} href={c.href} className="col-span-1 md:col-span-4 card group flex flex-col h-full border border-white/5 hover:border-[var(--brand)] transition-colors duration-300">
-              <h3 className="text-2xl font-light text-[var(--text-main)] mb-4 group-hover:text-[var(--brand)] transition-colors font-serif">
-                {c.title}
-              </h3>
-              <p className="text-base leading-relaxed text-[var(--text-muted)] group-hover:text-[var(--text-main)] transition-colors flex-grow">
-                {c.desc}
-              </p>
-              <div className="mt-6 pt-6 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-[var(--brand)] font-medium uppercase tracking-wider flex items-center gap-2">
-                Learn More <span>→</span>
-              </div>
-            </Link>
+      {/* BLOCK 1: What it is (3 Cards) */}
+      <section className="container max-w-6xl mx-auto px-6 py-24">
+        <SectionHeader
+          eyebrow="Residency"
+          title="What happens at Ateliér Libušín"
+          subtitle="A convergence of heritage, technology, and ecology."
+          align="center"
+          className="mb-16"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FeatureCard
+            title="Residency Program"
+            description="Time and space to develop work across media, sound, code, and landscape."
+            href="/residency"
+            icon={<span className="text-2xl">⚡</span>} // Placeholder for Icon
+          />
+          <FeatureCard
+            title="Facilities"
+            description="Studios, tools, and flexible working conditions for focused production."
+            href="/facilities"
+            icon={<span className="text-2xl">🛠️</span>}
+          />
+          <FeatureCard
+            title="Gallery & Archive"
+            description="Selected projects and documentation from past years."
+            href="/impact" // Changed to /impact as per previous context
+            icon={<span className="text-2xl">📂</span>}
+          />
+        </div>
+      </section>
+
+      {/* BLOCK 2: Why it's special (Split) */}
+      <section className="bg-[var(--bg-panel)] border-y border-white/5 py-24">
+        <div className="container max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+          {/* Left: Narrative */}
+          <div>
+            <SectionHeader
+              title="A quiet place with serious intent."
+              className="mb-6"
+            />
+            <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-6">
+              Ateliér Libušín is an independent cultural station operating as a <strong>zapsaný spolek (z.s.)</strong>.
+              We bridge the gap between urban presentation and rural experimentation, offering a sanctuary for deep work away from the noise of the capital.
+            </p>
+            <div className="flex gap-4 mt-8">
+              <LinkButton href="/residency" variant="primary">Explore Residency</LinkButton>
+              <LinkButton href="/press" variant="secondary">Press Kit</LinkButton>
+            </div>
+          </div>
+
+          {/* Right: Facts List */}
+          <div className="bg-[var(--bg-deep)] p-8 rounded-2xl border border-white/5">
+            <h3 className="text-xl font-serif text-[var(--text-main)] mb-6">Key Facts</h3>
+            <ul className="space-y-4">
+              {[
+                "Located in Libušín (35 min from Prague)",
+                "20+ years of cultural history",
+                "Focused on Digital / Sound / Land Art",
+                "EU-Grant Ready / Compliant Host",
+                "Global Alumni Network"
+              ].map((fact, i) => (
+                <li key={i} className="flex items-center text-[var(--text-muted)]">
+                  <span className="w-2 h-2 rounded-full bg-[var(--brand)] mr-4"></span>
+                  {fact}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      {/* BLOCK 3: Timeline Preview */}
+      <section className="container max-w-6xl mx-auto px-6 py-24 border-b border-white/5">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <SectionHeader
+            eyebrow="History"
+            title="Milestones"
+            className="mb-0"
+          />
+          <LinkButton href="/timeline" variant="ghost">See Full Timeline →</LinkButton>
+        </div>
+
+        <div className="space-y-6">
+          {timelinePreview.map((item, i) => (
+            <div key={i} className="flex items-center gap-8 group">
+              <span className="text-xl font-bold font-serif text-[var(--text-main)] w-24 text-right group-hover:text-[var(--brand)] transition-colors">{item.year}</span>
+              <div className="flex-grow h-px bg-white/10 group-hover:bg-[var(--brand)] transition-colors"></div>
+              <span className="text-[var(--text-muted)] w-2/3">{item.event}</span>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Intro Text - generous spacing */}
-      <section className="container max-w-4xl mx-auto px-6 text-center py-[var(--section-gap)]">
-        <h2 className="text-4xl md:text-5xl text-[var(--text-main)] font-light mb-8 font-serif leading-tight">
-          A Gateway for European Culture
-        </h2>
-        <div className="prose prose-lg prose-invert mx-auto">
-          <p className="text-xl md:text-2xl text-[var(--text-muted)] font-light leading-relaxed mb-8">
-            Ateliér Libušín is an independent cultural station operating as a <strong className="text-white">zapsaný spolek (z.s.)</strong>.
-            Located just 35 minutes from Prague, we bridge the gap between urban presentation and rural experimentation.
-          </p>
-          <p className="text-lg text-[var(--text-muted)]">
-            We are a "Qualified Host" for major EU funding bodies, offering specialized support for
-            <span className="text-[var(--brand)] font-medium mx-1">digital arts</span>,
-            <span className="text-[var(--accent)] font-medium mx-1">light performance</span>, and
-            <span className="text-[var(--phosphor)] font-medium mx-1">ecological research</span>.
-          </p>
+      {/* BLOCK 4: Hosts Preview */}
+      <section className="container max-w-6xl mx-auto px-6 py-24">
+        <SectionHeader
+          eyebrow="Team"
+          title="Hosts"
+          subtitle="The people behind the residency."
+          className="mb-12"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {hostsPreview.map((host, i) => (
+            <Link key={i} href="/hosts" className="group block">
+              <div className="aspect-[4/5] bg-[var(--bg-panel)] rounded-2xl overflow-hidden mb-6 border border-white/5 group-hover:border-[var(--brand)] transition-colors">
+                {/* Image Placeholder */}
+                <div className="w-full h-full bg-white/5 flex items-center justify-center text-[var(--text-muted)]">
+                  [Photo: {host.name}]
+                </div>
+              </div>
+              <h3 className="text-xl font-serif text-[var(--text-main)] group-hover:text-[var(--brand)] transition-colors">{host.name}</h3>
+              <p className="text-sm font-bold uppercase tracking-wider text-[var(--text-muted)] mb-2">{host.role}</p>
+              <p className="text-[var(--text-muted)] opacity-80">{host.bio}</p>
+            </Link>
+          ))}
+
+          {/* "Meet All" Card */}
+          <Link href="/hosts" className="group flex flex-col items-center justify-center aspect-[4/5] rounded-2xl border border-dashed border-white/20 hover:border-[var(--brand)] hover:bg-[var(--bg-panel)] transition-all">
+            <span className="text-4xl mb-4 group-hover:text-[var(--brand)] transition-colors">→</span>
+            <span className="text-lg font-medium text-[var(--text-main)]">Meet the full team</span>
+          </Link>
         </div>
       </section>
+
     </div>
   )
 }
