@@ -3,21 +3,28 @@ import typography from '@tailwindcss/typography'
 
 
 export default {
-  content: ['./app/**/*.{ts,tsx,mdx}','./components/**/*.{ts,tsx,mdx}','./content/**/*.{md,mdx}'],
+  content: ['./app/**/*.{ts,tsx,mdx}', './components/**/*.{ts,tsx,mdx}', './content/**/*.{md,mdx}'],
   theme: {
     container: { center: true, padding: { DEFAULT: '1rem', md: '2rem' } },
     extend: {
       colors: {
-        ink: '#121212',
-        brand: '#052962',        // Guardian-ish blue
-        brandAccent: '#ffe500',  // Guardian-ish yellow
-        surface: '#ffffff',
-        paper: '#f6f6f6',
-        border: '#e5e7eb',
-        muted: '#6b7280'
+        bg: 'var(--bg-deep)',
+        panel: 'var(--bg-panel)',
+        fg: 'var(--text-main)',
+        muted: 'var(--text-muted)',
+        brand: 'var(--brand)',
+        accent: 'var(--accent)',
+        phosphor: 'var(--phosphor)',
       },
-      borderRadius: { xl: '1rem', '2xl': '1.25rem' },
-      boxShadow: { card: '0 6px 28px rgba(0,0,0,0.08)' }
+      fontFamily: {
+        serif: ['var(--font-head)', 'serif'],
+        sans: ['var(--font-body)', 'sans-serif'],
+      },
+      borderRadius: {
+        DEFAULT: 'var(--radius)',
+        sm: 'calc(var(--radius) - 2px)',
+        lg: 'calc(var(--radius) + 4px)',
+      }
     }
   },
   plugins: [typography]
