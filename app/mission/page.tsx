@@ -44,6 +44,26 @@ export default function Mission() {
                 </div>
             </section>
 
+            {/* Social & Intercultural Mission (New User Request) */}
+            <section className="card border-l-4 border-l-[#ff0055] p-8">
+                <h2 className="text-xl font-semibold text-white mb-4">Social & Intercultural Mission</h2>
+                <p className="opacity-90 leading-relaxed mb-6">
+                    Ateliér Libušín operates as a <strong>"Cross-Border Hub,"</strong> dedicated to fostering social inclusion through the lens of digital and land art.
+                    We believe that technical innovation—specifically through tools like Tagtool—serves as a universal language that transcends cultural and linguistic barriers.
+                </p>
+                <ul className="space-y-3 opacity-80 text-sm">
+                    <li>
+                        <strong className="text-white">Equitable Access:</strong> We actively prioritize applications from artists underrepresented in the European digital arts scene.
+                    </li>
+                    <li>
+                        <strong className="text-white">Community Connectivity:</strong> Every residency includes a "Local Exchange" component, ensuring international work engages with the rural community.
+                    </li>
+                    <li>
+                        <strong className="text-white">Capacity Building:</strong> We provide mentorship to help artists from all backgrounds develop the digital literacy required for modern mobility.
+                    </li>
+                </ul>
+            </section>
+
             {/* Green Mobility */}
             <section className="bg-[#111] p-8 rounded-lg">
                 <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
@@ -64,7 +84,7 @@ export default function Mission() {
                     </div>
                     <div>
                         <div className="h-full bg-white/5 rounded flex items-center justify-center text-xs opacity-50 p-4">
-               [Map Placeholder: Nádraží Veleslavín -> Libušín]
+                            [Map Placeholder: Nádraží Veleslavín &rarr; Libušín]
                         </div>
                     </div>
                 </div>
