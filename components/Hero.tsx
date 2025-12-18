@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <img
-          src="/hero.png"
+          src="/IMG_8772.jpg"
           alt="Atelier Libusin Projection Art"
           className="w-full h-full object-cover"
         />
