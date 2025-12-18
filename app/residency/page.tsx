@@ -3,65 +3,105 @@
 import type { Metadata } from 'next'
 import SectionHeader from '../../components/ui/SectionHeader'
 import FeatureCard from '../../components/ui/FeatureCard'
+import LinkButton from '../../components/ui/LinkButton'
 
 export const metadata: Metadata = { title: 'Residency — Ateliér Libušín' }
 
 export default function Residency() {
   return (
-    <div className="container max-w-6xl mx-auto px-6 py-24 space-y-24">
-      {/* Header */}
-      <SectionHeader
-        eyebrow="Program"
-        title="Adaptive Residency Model"
-        subtitle="Shifting focus with the seasons to maximize our unique potential."
-        align="center"
-      />
+    <div className="container max-w-5xl mx-auto px-6 py-24 space-y-24">
 
-      {/* Seasonal Block */}
-      <section className="grid md:grid-cols-2 gap-8">
-        <FeatureCard
-          title="Winter Research (Nov — Mar)"
-          description="Dedicated to deep work, writing, and coding. 24/7 access to heated atelier. Ideal for digital artists and composers requiring isolation."
-          href="/apply"
-          className="border-t-4 border-t-[var(--brand)]"
-          icon={<span className="text-2xl">❄️</span>}
-        />
-        <FeatureCard
-          title="Summer Open Air (Apr — Oct)"
-          description="Focused on Land Art, Projection Mapping, and Performance. Expands into the outdoor pavilion and orchard for large-scale experimentation."
-          href="/apply"
-          className="border-t-4 border-t-[var(--accent)]"
-          icon={<span className="text-2xl">☀️</span>}
-        />
-      </section>
+      {/* 1. Hero-Lite Header */}
+      <div className="text-center max-w-3xl mx-auto space-y-6">
+        <span className="text-[var(--brand)] font-medium tracking-widest uppercase text-xs">Program</span>
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-white">Adaptive Residency Model</h1>
+        <p className="text-xl text-[var(--text-muted)] leading-relaxed">
+          Shifting focus with the seasons. We offer deep-focus winter sessions for digital work and open-air summer residencies for site-specific interventions.
+        </p>
+      </div>
 
-      {/* Facilities Info */}
-      <section className="bg-[var(--bg-panel)] rounded-2xl p-8 md:p-12 border border-white/5">
-        <h2 className="text-3xl font-light text-white mb-8 font-serif">Core Facilities</h2>
-        <div className="grid md:grid-cols-3 gap-8 text-[var(--text-muted)]">
-          <div>
-            <h3 className="text-white font-bold mb-2">The Atelier</h3>
-            <p>50m² heated studio, projection walls, basic sound system.</p>
+      {/* 2. Key Points Strip */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-white/10">
+        <div className="space-y-1">
+          <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider">Focus</span>
+          <span className="block text-white font-medium">Digital & Land Art</span>
+        </div>
+        <div className="space-y-1">
+          <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider">Duration</span>
+          <span className="block text-white font-medium">2 — 6 Weeks</span>
+        </div>
+        <div className="space-y-1">
+          <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider">Capacity</span>
+          <span className="block text-white font-medium">1 — 6 Artists</span>
+        </div>
+        <div className="space-y-1">
+          <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider">Support</span>
+          <span className="block text-white font-medium">Letters of Invitation</span>
+        </div>
+      </div>
+
+      {/* 3. Main Sections */}
+      <div className="space-y-20">
+
+        {/* Seasonal Rhythm */}
+        <section>
+          <SectionHeader title="Seasonal Rhythm" className="mb-8" />
+          <div className="grid md:grid-cols-2 gap-8">
+            <FeatureCard
+              title="Winter Research"
+              description="November — March. Dedicated to deep work, writing, and coding. 24/7 access to the heated atelier. Best for digital artists requiring isolation."
+              href="/apply"
+              icon={<span className="text-2xl">❄️</span>}
+            />
+            <FeatureCard
+              title="Summer Open Air"
+              description="April — October. Focused on outdoor installation, projection mapping, and performance. Expands into the orchard and pavilion."
+              href="/apply"
+              icon={<span className="text-2xl">☀️</span>}
+            />
           </div>
+        </section>
+
+        {/* Facilities Summary */}
+        <section className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <h3 className="text-white font-bold mb-2">Accommodation</h3>
-            <p>Private room (2p) or Shared Loft (6p). 8 certified beds.</p>
+            <SectionHeader title="Facilities & Life" className="mb-6" />
+            <p className="text-[var(--text-muted)] leading-relaxed mb-4">
+              Residents have exclusive access to a 50m² high-ceilinged studio tailored for projection and performance.
+              Accommodation is provided in simple, self-contained private rooms or a shared loft, with communal dining at its heart.
+            </p>
           </div>
-          <div>
-            <h3 className="text-white font-bold mb-2">The Orchard</h3>
-            <p>2000m² enclosed garden for outdoor installations.</p>
+          <div className="bg-[var(--bg-panel)] p-6 rounded-xl border border-white/5 text-sm space-y-3">
+            <div className="flex justify-between border-b border-white/5 pb-2">
+              <span className="text-[var(--text-muted)]">Studio</span>
+              <span className="text-white">50m², Heated, WiFi</span>
+            </div>
+            <div className="flex justify-between border-b border-white/5 pb-2">
+              <span className="text-[var(--text-muted)]">Garden</span>
+              <span className="text-white">2000m² Enclosed Orchard</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-[var(--text-muted)]">Equipment</span>
+              <span className="text-white">Projectors, Sound, Tagtool</span>
+            </div>
           </div>
+        </section>
+      </div>
+
+      {/* 4. CTA Block */}
+      <section className="bg-[var(--bg-panel)] rounded-2xl p-12 border border-white/5 text-center space-y-8">
+        <div>
+          <h2 className="text-3xl font-serif text-white mb-4">Join the Residency</h2>
+          <p className="text-[var(--text-muted)] max-w-xl mx-auto">
+            We review applications on a rolling basis. Funding support is available via formal letters for grant applications.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <LinkButton href="/apply" variant="primary">Apply Now</LinkButton>
+          <LinkButton href="/contact" variant="ghost">Contact Us</LinkButton>
         </div>
       </section>
 
-      {/* Fees / Support */}
-      <section className="text-center max-w-2xl mx-auto">
-        <h2 className="text-2xl font-light text-white mb-4 font-serif">Fees & Support</h2>
-        <p className="text-[var(--text-muted)] text-lg mb-8">
-          Fees by arrangement. We act as a project partner for Visegrad Fund and Creative Europe applications.
-          Formal Letters of Invitation available.
-        </p>
-      </section>
     </div>
   )
 }

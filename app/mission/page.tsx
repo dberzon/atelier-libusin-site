@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import SectionHeader from '../../components/ui/SectionHeader'
+import LinkButton from '../../components/ui/LinkButton'
 
 export const metadata: Metadata = {
     title: 'Mission & Governance — Ateliér Libušín',
@@ -8,141 +9,97 @@ export const metadata: Metadata = {
 
 export default function Mission() {
     return (
-        <div className="container max-w-6xl mx-auto px-6 py-24 space-y-24">
+        <div className="container max-w-5xl mx-auto px-6 py-24 space-y-24">
 
-            {/* Header */}
-            <SectionHeader
-                eyebrow="Our Purpose"
-                title="Mission & Governance"
-                subtitle='Stewarding a "Rural Avant-Garde" — where ecological grounding meets digital innovation.'
-                align="center"
-            />
-
-            {/* Governance Statement */}
-            <section className="bg-[var(--bg-panel)] border-l-4 border-[var(--brand)] p-8 md:p-12 rounded-r-2xl border-y border-r border-white/5">
-                <h2 className="text-2xl font-serif text-white mb-4">Legal Status & Governance</h2>
-                <p className="text-[var(--text-muted)] leading-relaxed">
-                    Ateliér Libušín is currently transitioning its legal structure to a <strong>zapsaný spolek (z.s.)</strong> [Registered Association]
-                    to better align with our non-profit mission. Previously operating as <em>Ateliér Libušín s.r.o.</em>, this restructuring reflects our commitment to transparency, democratic governance,
-                    and long-term sustainability.
+            {/* 1. Hero-Lite Header */}
+            <div className="text-center max-w-3xl mx-auto space-y-6">
+                <span className="text-[var(--brand)] font-medium tracking-widest uppercase text-xs">Philosophy</span>
+                <h1 className="text-4xl md:text-5xl font-serif font-bold text-white">Mission & Governance</h1>
+                <p className="text-xl text-[var(--text-muted)] leading-relaxed">
+                    Stewarding a "Rural Avant-Garde" — where ecological grounding meets digital innovation. We enable high-tech art in a heritage context.
                 </p>
-            </section>
+            </div>
 
-            {/* Local Context Block */}
-            <section>
-                <div className="border-b border-white/10 pb-4 mb-12">
-                    <SectionHeader
-                        title="The Libušín Connection"
-                        subtitle="Local Context & Social Impact"
-                        className="mb-0"
-                    />
+            {/* 2. Key Points Strip */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-y border-white/10">
+                <div className="space-y-1 md:text-center">
+                    <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider">Legal Status</span>
+                    <span className="block text-white font-medium">Registered Association (z.s.)</span>
                 </div>
-
-                <div className="grid gap-12">
-                    {/* Rural Revitalisation */}
-                    <div className="grid md:grid-cols-[1fr_2fr] gap-6">
-                        <div className="text-[var(--brand)] font-bold text-lg uppercase tracking-wider">Rural Revitalisation</div>
-                        <div>
-                            <p className="text-[var(--text-main)] mb-4">
-                                We view the residency as a platform for <strong>"Social Scaffolding."</strong> By bringing world-class artists to a small Czech town, we challenge the centralization of culture.
-                            </p>
-                            <ul className="space-y-2 text-[var(--text-muted)] text-sm">
-                                <li className="flex gap-3"><span className="text-[var(--brand)]">●</span> Public Showcases: Open-air projection nights.</li>
-                                <li className="flex gap-3"><span className="text-[var(--brand)]">●</span> Heritage Preservation: Engaging with local ecology and history.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Community Engagement */}
-                    <div className="grid md:grid-cols-[1fr_2fr] gap-6">
-                        <div className="text-[var(--accent)] font-bold text-lg uppercase tracking-wider">Community Engagement</div>
-                        <div>
-                            <p className="text-[var(--text-main)] mb-4">
-                                We facilitate genuine <strong>"Cross-Border" exchange</strong> between residents and the local population.
-                            </p>
-                            <ul className="space-y-2 text-[var(--text-muted)] text-sm">
-                                <li className="flex gap-3"><span className="text-[var(--accent)]">●</span> Workshops & Education: "Open Studio" sessions for local youth.</li>
-                                <li className="flex gap-3"><span className="text-[var(--accent)]">●</span> Social Cohesion: Integration of local oral histories.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Economic Impact */}
-                    <div className="grid md:grid-cols-[1fr_2fr] gap-6">
-                        <div className="text-white font-bold text-lg uppercase tracking-wider">Economic Impact</div>
-                        <div>
-                            <p className="text-[var(--text-main)] mb-4">
-                                By hosting up to 8 residents at a time, we stimulate the local economy and promote Libušín as a destination for sustainable <strong>"Slow Tourism."</strong>
-                            </p>
-                        </div>
-                    </div>
+                <div className="space-y-1 md:text-center">
+                    <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider">Core Method</span>
+                    <span className="block text-white font-medium">Social Scaffolding</span>
                 </div>
-            </section>
+                <div className="space-y-1 md:text-center">
+                    <span className="block text-xs uppercase text-[var(--text-muted)] tracking-wider">Alignment</span>
+                    <span className="block text-white font-medium">New European Bauhaus</span>
+                </div>
+            </div>
 
-            {/* Philosophy / Pillars */}
-            <section className="grid md:grid-cols-2 gap-12 pt-12 border-t border-white/10">
-                <div className="bg-[var(--bg-panel)] p-8 rounded-2xl border border-white/5">
-                    <h3 className="text-2xl font-serif text-[var(--accent)] mb-4">Local Roots</h3>
+            {/* 3. Main Sections */}
+            <div className="space-y-20">
+
+                {/* Governance Statement */}
+                <section className="bg-[var(--bg-panel)] border-l-4 border-[var(--brand)] p-8 md:p-12 rounded-r-2xl border-y border-r border-white/5">
+                    <h2 className="text-2xl font-serif text-white mb-4">Governance Structure</h2>
                     <p className="text-[var(--text-muted)] leading-relaxed">
-                        We operate as a community hub in Libušín, engaging with local history (mining) and future (ecology).
-                        Our orchard is a shared resource, open for seasonal community gatherings.
+                        Ateliér Libušín is transitioning to a <strong>zapsaný spolek (z.s.)</strong> structure to better align with our non-profit mission.
+                        This restructuring reflects our commitment to transparency, democratic governance, and long-term sustainability as a cultural institution.
                     </p>
-                </div>
-                <div className="bg-[var(--bg-panel)] p-8 rounded-2xl border border-white/5">
-                    <h3 className="text-2xl font-serif text-[var(--brand)] mb-4">Global Reach</h3>
-                    <p className="text-[var(--text-muted)] leading-relaxed">
-                        Through partnerships with entities like OMAi (Austria), we export the results of our rural residencies to major festivals.
-                        We act as a quiet incubation chamber for loud international work.
-                    </p>
-                </div>
-            </section>
+                </section>
 
-            {/* Green Mobility */}
-            <section className="bg-[var(--bg-deep)] p-8 md:p-12 rounded-2xl border border-white/10">
-                <h2 className="text-2xl font-serif mb-6 flex items-center gap-3 text-white">
-                    <span className="text-[#4ade80]">●</span> Green Mobility & Access
-                </h2>
-                <div className="grid md:grid-cols-2 gap-12">
-                    <div>
-                        <h4 className="font-bold text-white mb-2 uppercase tracking-wide">The "35-Minute Link"</h4>
-                        <p className="text-[var(--text-muted)] text-sm mb-6 leading-relaxed">
-                            We encourage all residents to use the direct bus connection from <strong>Prague Nádraží Veleslavín</strong>.
-                            It is fast, reliable, and luggage-friendly.
+                {/* Strategic Pillars */}
+                <section>
+                    <SectionHeader title="Strategic Pillars" className="mb-8" />
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="space-y-3">
+                            <h3 className="text-lg font-serif text-white border-b border-white/10 pb-2">Rural Revitalisation</h3>
+                            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                                Challenging the centralization of culture by bringing world-class artists to a small town. We use art as a tool for "Social Scaffolding."
+                            </p>
+                        </div>
+                        <div className="space-y-3">
+                            <h3 className="text-lg font-serif text-white border-b border-white/10 pb-2">Community Exchange</h3>
+                            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                                Facilitating genuine cross-border exchange between residents and the local population through open studios, workshops, and oral history recording.
+                            </p>
+                        </div>
+                        <div className="space-y-3">
+                            <h3 className="text-lg font-serif text-white border-b border-white/10 pb-2">Ecological Awareness</h3>
+                            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                                Promoting "Slow Tourism" and low-carbon mobility. Our enclosed orchards serve as a living lab for sustainable artistic practices.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Founders' Vision */}
+                <section className="bg-[var(--bg-deep)] p-8 md:p-12 rounded-2xl border border-white/10">
+                    <SectionHeader title="Founding Vision" className="mb-6" />
+                    <div className="prose prose-invert max-w-none text-[var(--text-muted)] font-light">
+                        <p className="mb-4">
+                            Founded in 2002, Ateliér Libušín began as a private sanctuary for experimentation. Over two decades, it has evolved into a collaborative crossroads for digital and land art.
                         </p>
-                        <ul className="text-sm space-y-2 text-[var(--text-muted)]">
-                            <li>• Bus 300/399 to Kladno (freq. 10min)</li>
-                            <li>• Local connection to Libušín</li>
-                            <li>• Total Carbon Footprint: &lt; 2kg CO2</li>
-                        </ul>
+                        <p>
+                            Our landmark collaborations with OMAi/Tagtool (2018-2019) proved that rural spaces can serve as high-capacity incubators for global digital innovation.
+                            Today, we stand as a "Qualified Host" dedicated to sustainable cultural mobility.
+                        </p>
                     </div>
-                    <div className="bg-[var(--bg-panel)] rounded-xl border border-white/5 flex items-center justify-center min-h-[150px]">
-                        <span className="text-[var(--text-muted)] opacity-50 text-sm">[Map Placeholder]</span>
-                    </div>
+                </section>
+
+            </div>
+
+            {/* 4. CTA Block */}
+            <section className="bg-[var(--bg-panel)] rounded-2xl p-12 border border-white/5 text-center space-y-8">
+                <div>
+                    <h2 className="text-3xl font-serif text-white mb-4">Join Our Mission</h2>
+                    <p className="text-[var(--text-muted)] max-w-xl mx-auto">
+                        We welcome partnerships with cultural institutions, grant bodies, and academic researchers.
+                    </p>
                 </div>
-            </section>
-
-            {/* Founders' Vision */}
-            <section className="pt-24 border-t border-white/10">
-                <SectionHeader
-                    title="Founders' Vision"
-                    subtitle="From Private Studio to European Hub."
-                    className="mb-12"
-                />
-
-                <div className="prose prose-lg prose-invert max-w-4xl text-[var(--text-muted)] font-light leading-relaxed">
-                    <p className="mb-8">
-                        Founded in 2002, Ateliér Libušín began as a private sanctuary for artistic experimentation.
-                        Over two decades, what started as a personal atelier has naturally evolved into a collaborative crossroads.
-                    </p>
-                    <h3 className="text-white text-xl font-normal mt-12 mb-4">The Digital and Land Art Synthesis</h3>
-                    <p className="mb-8">
-                        Our journey reached a turning point in 2018/2019 through landmark collaborations with OMAi/Tagtool.
-                        These milestones proved that rural spaces can serve as high-capacity incubators for global digital innovation.
-                    </p>
-                    <h3 className="text-white text-xl font-normal mt-12 mb-4">Commitment for 2025</h3>
-                    <p>
-                        As we align our operations with the <strong>New European Bauhaus</strong>, Ateliér Libušín stands as a "Qualified Host" dedicated to sustainable cultural mobility.
-                    </p>
+                <div className="flex flex-col md:flex-row gap-6 justify-center">
+                    <LinkButton href="/impact" variant="primary">View Impact Report</LinkButton>
+                    <LinkButton href="/contact" variant="ghost">Contact Directors</LinkButton>
                 </div>
             </section>
 
