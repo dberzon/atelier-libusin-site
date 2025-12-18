@@ -2,6 +2,7 @@
 
 
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 export const metadata: Metadata = { title: 'Apply — Ateliér Libušín' }
 
@@ -25,19 +26,25 @@ export default function Apply() {
         </p>
       </div>
 
-      {/* Smart Form Embed Placeholder */}
+      {/* Smart Form Embed */}
       <div className="w-full bg-[#111] rounded-xl overflow-hidden min-h-[600px] border border-white/10 relative">
-        <div className="absolute inset-0 flex items-center justify-center flex-col opacity-50">
-          <p className="mb-4">[ Tally.so Smart Form Embed ]</p>
-          <ul className="text-sm list-disc text-left space-y-2">
-            <li>Logic: Applicant Type (Individual/Group)</li>
-            <li>Logic: Grant Alignment (Sustainability/Digital/Social)</li>
-            <li>Logic: Green Mobility Tracker</li>
-            <li>Upload: Portfolio (PDF/Link)</li>
-          </ul>
+        <iframe
+          data-tally-src="https://tally.so/embed/mBB09q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="216"
+          title="Residency Application"
+          className="w-full h-full border-0"
+        >
+        </iframe>
+
+        {/* Fallback / Loading State */}
+        <div className="absolute -z-10 inset-0 flex items-center justify-center flex-col opacity-30">
+          <p>Loading Secure Application Form...</p>
         </div>
-        {/* Actual Embed Code would go here: <iframe data-tally-src="..." ... /> */}
       </div>
+
+      <Script id="tally-js" src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
 
       <section className="grid md:grid-cols-2 gap-8 text-sm opacity-70 pt-8 border-t border-white/10">
         <div>
