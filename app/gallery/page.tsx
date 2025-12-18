@@ -17,8 +17,8 @@ export default function GalleryPage() {
       <SectionHeader
         eyebrow="Archive"
         title="Gallery"
-        subtitle "A selection of images from residencies, workshops, and performances at Ateliér Libušín."
-      align="center"
+        subtitle="A selection of images from residencies, workshops, and performances at Ateliér Libušín."
+        align="center"
       />
 
       <div className="bg-[var(--bg-panel)] p-6 md:p-8 rounded-2xl border border-white/5">
