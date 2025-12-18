@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = { title: 'Mission & Governance — Ateliér Libušín' }
+export const metadata: Metadata = {
+    title: 'Mission & Governance — Ateliér Libušín',
+    keywords: ['Social Impact', 'Rural Development', 'Cultural Heritage', 'Residency', 'Art', 'Ecology']
+}
 
 export default function Mission() {
     return (
@@ -26,6 +29,71 @@ export default function Mission() {
                 </p>
             </section>
 
+            {/* Local Context & Social Impact: The Libušín Connection */}
+            <section className="space-y-8">
+                <div className="border-b border-white/10 pb-4 mb-8">
+                    <h2 className="text-3xl font-light text-white mb-2">The Libušín Connection</h2>
+                    <p className="text-lg opacity-80">Local Context & Social Impact</p>
+                </div>
+
+                <div className="grid gap-8">
+                    {/* 1. Rural Revitalisation */}
+                    <div className="grid md:grid-cols-[1fr_2fr] gap-6">
+                        <div className="text-[#00f0ff] font-bold text-lg">Rural Revitalisation</div>
+                        <div>
+                            <p className="opacity-90 mb-4">
+                                We view the residency as a platform for <strong>"Social Scaffolding."</strong> By bringing world-class artists to a small Czech town,
+                                we challenge the centralization of culture.
+                            </p>
+                            <ul className="list-disc list-inside space-y-2 opacity-80 text-sm">
+                                <li>
+                                    <strong>Public Showcases:</strong> Open-air projection nights transforming the town's architecture into a digital gallery.
+                                </li>
+                                <li>
+                                    <strong>Heritage Preservation:</strong> Use of a traditional building and orchard to engage with local ecology and history (New European Bauhaus alignment).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* 2. Community Engagement */}
+                    <div className="grid md:grid-cols-[1fr_2fr] gap-6">
+                        <div className="text-[#ff0055] font-bold text-lg">Community Engagement</div>
+                        <div>
+                            <p className="opacity-90 mb-4">
+                                We facilitate genuine <strong>"Cross-Border" exchange</strong> between residents and the local population.
+                            </p>
+                            <ul className="list-disc list-inside space-y-2 opacity-80 text-sm">
+                                <li>
+                                    <strong>Workshops & Education:</strong> "Open Studio" sessions for local youth focusing on digital literacy (Tagtool).
+                                </li>
+                                <li>
+                                    <strong>Social Cohesion:</strong> Projects often integrate local oral histories, giving the community a voice in the artistic narrative.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* 3. Economic Impact */}
+                    <div className="grid md:grid-cols-[1fr_2fr] gap-6">
+                        <div className="text-white font-bold text-lg">Economic Impact</div>
+                        <div>
+                            <p className="opacity-90 mb-4">
+                                By hosting up to 8 residents at a time, we stimulate the local economy and promote Libušín as a destination for sustainable <strong>"Slow Tourism."</strong>
+                            </p>
+                            <ul className="list-disc list-inside space-y-2 opacity-80 text-sm">
+                                <li>
+                                    <strong>Local Sourcing:</strong> Prioritizing local suppliers for food and services.
+                                </li>
+                                <li>
+                                    <strong>Institutional Governance:</strong> Transparent model ensuring resources circulate within the community.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Philosophy / Pillars */}
             <section className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
@@ -44,7 +112,7 @@ export default function Mission() {
                 </div>
             </section>
 
-            {/* Social & Intercultural Mission (New User Request) */}
+            {/* Social & Intercultural Mission */}
             <section className="card border-l-4 border-l-[#ff0055] p-8">
                 <h2 className="text-xl font-semibold text-white mb-4">Social & Intercultural Mission</h2>
                 <p className="opacity-90 leading-relaxed mb-6">
