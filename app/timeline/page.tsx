@@ -18,7 +18,7 @@ export default function Timeline() {
             <SectionHeader
                 eyebrow="History"
                 title="Our Timeline"
-                subtitle="A decade of adapting heritage for the future."
+                subtitle="Key dates in the development of Ateliér Libušín."
                 align="center"
             />
 
@@ -44,14 +44,14 @@ export default function Timeline() {
             {/* CTA Block */}
             <section className="bg-[var(--bg-panel)] rounded-3xl p-16 border border-[var(--brand)]/20 text-center space-y-10 my-12">
                 <div className="space-y-4">
-                    <h2 className="text-4xl font-serif text-white">Inspired by our journey?</h2>
+                    <h2 className="text-4xl font-serif text-white">Next steps</h2>
                     <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
-                        Join us in writing the next chapter of Ateliér Libušín.
+                        The residency program is ongoing.
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-6 justify-center">
-                    <LinkButton href="/apply" variant="primary">Start Application</LinkButton>
-                    <LinkButton href="/mission" variant="ghost">Learn More</LinkButton>
+                    <LinkButton href="/apply" variant="primary">Apply</LinkButton>
+                    <LinkButton href="/mission" variant="ghost">Mission</LinkButton>
                 </div>
             </section>
         </div>

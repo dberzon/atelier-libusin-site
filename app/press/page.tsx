@@ -70,7 +70,7 @@ export default function Press() {
           </p>
         </div>
         <div className="flex justify-center">
-          <LinkButton href="mailto:berzon73@gmail.com" variant="primary">Contact Press Office</LinkButton>
+          <LinkButton href="mailto:berzon73@gmail.com" variant="primary">Email Press Contact</LinkButton>
         </div>
       </section>
 

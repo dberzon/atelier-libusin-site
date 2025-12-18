@@ -12,10 +12,10 @@ export default function Impact() {
       <section className="max-w-3xl mx-auto pt-16 pb-10 text-center space-y-6">
         <h1 className="text-5xl md:text-6xl font-serif font-bold text-white">Impact</h1>
         <p className="text-xl text-[var(--text-muted)] leading-relaxed max-w-2xl mx-auto">
-          Ateliér Libušín operates as a long-term cultural site, supporting artistic research, production, and continuity beyond individual residencies.
+          Ateliér Libušín operates as a long-term cultural site. The residency program supports artistic research, production, and continuity.
         </p>
         <p className="text-[var(--text-muted)] text-base max-w-2xl mx-auto">
-          This long-term impact is sustained primarily through the residency program, which provides continuity, repetition, and accumulated practice over time.
+          The program structure allows for repeated engagement and accumulated practice over time.
         </p>
       </section>
       {/* Key Points Strip */}
@@ -45,22 +45,22 @@ export default function Impact() {
             Ateliér Libušín functions as a stable cultural site rather than a project-based initiative.
           </p>
           <div className="space-y-4 text-[var(--text-muted)]">
-            <p>Its long-term presence allows for sustained artistic development and repeated engagement with the site and community.</p>
-            <p>Knowledge and experience accumulate over time, benefiting both residents and the wider region.</p>
+            <p>The long-term presence of the site enables repeated engagement with the location and its surrounding community.</p>
+            <p>Knowledge and experience accumulate across residency cycles.</p>
           </div>
         </section>
         {/* Support for Artistic Practice Section */}
         <section>
           <SectionHeader title="Support for artistic practice" className="mb-6" />
           <p className="text-[var(--text-muted)] leading-relaxed">
-            The residency provides artists with time, space, and autonomy to develop work that may not fit short production cycles. Emphasis is placed on process, research, and continuity rather than immediate public output.
+            The residency provides time, space, and autonomy. Emphasis is placed on process, research, and continuity rather than immediate public output.
           </p>
         </section>
         {/* Local and International Context Section */}
         <section>
           <SectionHeader title="Local and international context" className="mb-6" />
           <p className="text-[var(--text-muted)] leading-relaxed">
-            Located in a rural setting near Prague, Ateliér Libušín connects local context with international artistic networks, providing a shared environment shaped by place and exchange.
+            The site is located in a rural setting near Prague. It operates within both local and international artistic networks.
           </p>
         </section>
         {/* Documentation and Accountability Section */}

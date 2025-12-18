@@ -13,7 +13,7 @@ export default function Facilities() {
       <SectionHeader
         eyebrow="Facilities"
         title="Working conditions at Ateliér Libušín"
-        subtitle="An adaptive environment designed for focus, creation, and community."
+        subtitle="Available spaces and equipment for residents."
         align="center"
       />
 
@@ -56,21 +56,21 @@ export default function Facilities() {
       </section>
 
       {/* Eco Note */}
-      <div className="text-center max-w-2xl mx-auto border-t border-white/5 pt-12 text-[var(--text-muted)] italic">
-        "We encourage low-impact, eco-conscious approaches and often share seasonal produce from the orchard."
+      <div className="text-center max-w-2xl mx-auto border-t border-white/5 pt-12 text-[var(--text-muted)]">
+        The site supports low-impact, eco-conscious working methods. Seasonal produce from the orchard is available.
       </div>
 
       {/* CTA Block */}
       <section className="bg-[var(--bg-panel)] rounded-3xl p-16 md:p-24 border border-[var(--brand)]/20 text-center space-y-10 my-12">
         <div className="space-y-4">
-          <h2 className="text-4xl font-serif text-white">Interested in working here?</h2>
+          <h2 className="text-4xl font-serif text-white">Further information</h2>
           <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
             Our facilities are designed to support a range of artistic practices, from digital experimentation to traditional land art.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-6 justify-center">
-          <LinkButton href="/apply" variant="primary">Apply Now</LinkButton>
-          <LinkButton href="/residency" variant="ghost">Explore Residency</LinkButton>
+          <LinkButton href="/apply" variant="primary">Apply</LinkButton>
+          <LinkButton href="/residency" variant="ghost">Residency Program</LinkButton>
         </div>
       </section>
 

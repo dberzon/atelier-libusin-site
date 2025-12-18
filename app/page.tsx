@@ -62,15 +62,15 @@ export default function Page() {
           {/* Left: Narrative */}
           <div>
             <SectionHeader
-              title="A quiet place with serious intent."
+              title="Operating model"
               className="mb-6"
             />
             <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-6">
               Ateliér Libušín is an independent cultural station operating as a <strong>zapsaný spolek (z.s.)</strong>.
-              We bridge the gap between urban presentation and rural experimentation, offering a sanctuary for deep work away from the noise of the capital.
+              It provides a working environment separate from the urban context, connecting heritage architecture with contemporary artistic practice.
             </p>
             <div className="flex gap-4 mt-8">
-              <LinkButton href="/residency" variant="primary">Explore Residency</LinkButton>
+              <LinkButton href="/residency" variant="primary">Residency Program</LinkButton>
               <LinkButton href="/press" variant="secondary">Press Kit</LinkButton>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Page() {
             title="Milestones"
             className="mb-0"
           />
-          <LinkButton href="/timeline" variant="ghost">See Full Timeline →</LinkButton>
+          <LinkButton href="/timeline" variant="ghost">Full Timeline</LinkButton>
         </div>
 
         <div className="space-y-6">

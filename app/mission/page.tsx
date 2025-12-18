@@ -14,7 +14,7 @@ export default function Mission() {
             <div className="text-center max-w-3xl mx-auto space-y-4">
                 <h1 className="text-4xl md:text-5xl font-serif font-bold text-white">Mission</h1>
                 <p className="text-lg text-[var(--text-muted)] leading-relaxed">
-                    Ateliér Libušín exists to support sustained artistic practice through time, autonomy, and attention to place.
+                    Ateliér Libušín operates as a long-term residency site, structured around time, autonomy, and place.
                 </p>
             </div>
 
@@ -38,7 +38,7 @@ export default function Mission() {
                 <section>
                     <h2 className="text-2xl font-serif text-white mb-4">Time and continuity</h2>
                     <p className="text-[var(--text-muted)] leading-relaxed max-w-3xl">
-                        The mission of Ateliér Libušín is rooted in the belief that meaningful artistic work requires time. By operating as a long-term cultural site, the residency allows practices to unfold beyond short-term production or exhibition cycles.
+                        The residency operates as a long-term cultural site. This structure allows work to develop beyond short-term production or exhibition cycles.
                     </p>
                 </section>
 
@@ -46,7 +46,7 @@ export default function Mission() {
                 <section>
                     <h2 className="text-2xl font-serif text-white mb-4">Autonomy and responsibility</h2>
                     <p className="text-[var(--text-muted)] leading-relaxed max-w-3xl">
-                        Artists are given a high degree of autonomy in how they structure their work during a residency. This autonomy is paired with responsibility — toward the shared environment, the working conditions, and the long-term continuity of the site.
+                        Residents have a high degree of autonomy in structuring their work. This is paired with responsibility toward the shared environment and the ongoing operation of the site.
                     </p>
                 </section>
 
@@ -54,7 +54,7 @@ export default function Mission() {
                 <section>
                     <h2 className="text-2xl font-serif text-white mb-4">Place as context</h2>
                     <p className="text-[var(--text-muted)] leading-relaxed max-w-3xl">
-                        The rural location of Ateliér Libušín is not a backdrop but a working condition. The site shapes the rhythm, focus, and material realities of artistic practice, encouraging attention to context rather than isolation from it.
+                        The rural location functions as a working condition. The site shapes the rhythm and material realities of artistic practice.
                     </p>
                 </section>
 
@@ -62,7 +62,7 @@ export default function Mission() {
                 <section>
                     <h2 className="text-2xl font-serif text-white mb-4">Independence and sustainability</h2>
                     <p className="text-[var(--text-muted)] leading-relaxed max-w-3xl">
-                        The mission prioritizes independence in both artistic and organizational terms. This independence supports flexibility, long-term sustainability, and the ability to respond to changing cultural conditions without reliance on short-term frameworks.
+                        The site operates independently in both artistic and organizational terms. This structure supports flexibility and long-term sustainability.
                     </p>
                 </section>
 

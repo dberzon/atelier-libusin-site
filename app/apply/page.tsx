@@ -16,14 +16,14 @@ export default function Apply() {
       <SectionHeader
         eyebrow="Open Call"
         title="Apply for Residency"
-        subtitle="We accept applications on a rolling basis for the Winter Research and Summer Open Air sessions."
+        subtitle="Applications are open on a rolling basis for the Winter Research and Summer Open Air sessions."
         align="center"
       />
 
       {/* Green Mobility Ethos */}
       <section className="bg-[var(--bg-panel)] p-8 md:p-12 rounded-2xl border border-white/5">
         <div className="flex items-center gap-4 mb-8 border-b border-white/5 pb-4">
-          <h2 className="text-2xl font-serif text-white">Green Mobility & The Slow Travel Ethos</h2>
+          <h2 className="text-2xl font-serif text-white">Green Mobility & Slow Travel</h2>
           <span className="text-xs font-bold uppercase tracking-widest text-[#4ade80] border border-[#4ade80]/30 px-3 py-1 rounded-full bg-[#4ade80]/5">
             EU Green Deal
           </span>
@@ -124,14 +124,14 @@ export default function Apply() {
       {/* CTA Block */}
       <section className="bg-[var(--bg-panel)] rounded-3xl p-16 md:p-24 border border-[var(--brand)]/20 text-center space-y-10 my-12">
         <div className="space-y-4">
-          <h2 className="text-4xl font-serif text-white">Need help with your application?</h2>
+          <h2 className="text-4xl font-serif text-white">Questions</h2>
           <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
             For questions about the residency process, grant alignment, or visiting the site.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           <LinkButton href="mailto:berzon73@gmail.com" variant="primary">Send Email</LinkButton>
-          <LinkButton href="/contact" variant="ghost">View Contact Page</LinkButton>
+          <LinkButton href="/contact" variant="ghost">Contact Page</LinkButton>
         </div>
       </section>
 

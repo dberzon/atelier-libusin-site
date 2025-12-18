@@ -13,7 +13,7 @@ export default function Hosts() {
       <SectionHeader
         eyebrow="Team"
         title="Your Hosts"
-        subtitle="Artist-run and artist-led. We facilitate your residency from lived experience."
+        subtitle="The residency is operated by practicing artists with direct experience in the program."
         align="center"
       />
 
@@ -53,14 +53,14 @@ export default function Hosts() {
       {/* CTA Block */}
       <section className="bg-[var(--bg-panel)] rounded-3xl p-16 border border-[var(--brand)]/20 text-center space-y-10 my-12">
         <div className="space-y-4">
-          <h2 className="text-4xl font-serif text-white">Have questions for the team?</h2>
+          <h2 className="text-4xl font-serif text-white">Contact the hosts</h2>
           <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
             We are happy to discuss custom residency needs or technical requirements.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           <LinkButton href="mailto:info@atelierlibusin.cz" variant="primary">Send Email</LinkButton>
-          <LinkButton href="/contact" variant="ghost">Go to Contact</LinkButton>
+          <LinkButton href="/contact" variant="ghost">Contact Page</LinkButton>
         </div>
       </section>
 

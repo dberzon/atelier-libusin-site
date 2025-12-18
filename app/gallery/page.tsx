@@ -38,7 +38,7 @@ export default function GalleryPage() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-6 justify-center">
-          <LinkButton href="/apply" variant="primary">Apply to the Program</LinkButton>
+          <LinkButton href="/apply" variant="primary">Apply</LinkButton>
           <LinkButton href="/residency" variant="ghost">Residency Details</LinkButton>
         </div>
       </section>

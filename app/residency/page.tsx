@@ -16,10 +16,10 @@ export default function Residency() {
         <span className="text-[var(--brand)] font-medium tracking-widest uppercase text-xs">Program</span>
         <h1 className="text-5xl md:text-6xl font-serif font-bold text-white">Adaptive Residency Model</h1>
         <p className="text-xl text-[var(--text-muted)] leading-relaxed max-w-2xl mx-auto">
-          A focused residency for artists who need time, autonomy, and a stable environment to develop long-form work, experiment, and reflect.
+          A residency offering time, autonomy, and a stable working environment for long-form practice.
         </p>
         <div className="pt-4 flex justify-center">
-          <LinkButton href="/apply" variant="primary">Apply Now</LinkButton>
+          <LinkButton href="/apply" variant="primary">Apply</LinkButton>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function Residency() {
         <section className="space-y-12">
           <SectionHeader
             title="Focus & Eligibility"
-            subtitle="We prioritize projects that bridge the gap between digital arts and environmental stewardship."
+            subtitle="The residency supports projects at the intersection of digital arts and environmental practice."
             align="left"
           />
           <div className="grid md:grid-cols-2 gap-12">
@@ -71,27 +71,26 @@ export default function Residency() {
               <div>
                 <h3 className="text-white font-serif text-xl mb-4">Digital Arts & New Media</h3>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  We are a hub for Tagtool, projection mapping, and algorithmic art.
-                  Our studio is equipped for darkness, making it ideal for light-based experimentation and testing.
+                  The site has established infrastructure for Tagtool, projection mapping, and algorithmic art.
+                  The studio is equipped for darkness, suitable for light-based work and testing.
                 </p>
               </div>
               <div>
                 <h3 className="text-white font-serif text-xl mb-4">Land Art & Ecology</h3>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  The 2000m² orchard is a living canvas. We support site-specific installations, bio-acoustic research,
-                  and performance works that engage directly with the soil and seasons.
+                  The 2000m² orchard is available for site-specific installations, bio-acoustic research,
+                  and performance works engaging with land and seasonal conditions.
                 </p>
               </div>
             </div>
             <div className="bg-[var(--bg-deep)] p-8 rounded-xl border border-white/5 space-y-6">
               <h4 className="text-white font-serif text-lg mb-2">What the residency supports</h4>
-              <p className="text-[var(--text-muted)] text-sm mb-4">We welcome artists and researchers whose work explores the intersection of digital media, land art, and ecological practice.</p>
+              <p className="text-[var(--text-muted)] text-sm mb-4">The residency is suited to artists and researchers working at the intersection of digital media, land art, and ecological practice.</p>
               <ul className="space-y-2 text-[var(--text-muted)] text-sm pl-2">
                 <li className="flex gap-2"><span className="text-green-400">•</span> Tagtool, projection mapping, and algorithmic art</li>
                 <li className="flex gap-2"><span className="text-green-400">•</span> Site-specific installations and land art</li>
                 <li className="flex gap-2"><span className="text-green-400">•</span> Bio-acoustic research and performance</li>
-                <li className="flex gap-2"><span className="text-green-400">•</span> Self-directed, rural living</li>
-                <li className="flex gap-2"><span className="text-green-400">•</span> Focused time away from city distractions</li>
+                <li className="flex gap-2"><span className="text-green-400">•</span> Self-directed work in a rural setting</li>
               </ul>
               <ul className="pt-4 border-t border-white/5 opacity-80 space-y-1 text-xs">
                 <li>Capacity: max 6</li>
@@ -125,10 +124,10 @@ export default function Residency() {
             <div>
               <h3 className="text-white font-serif text-xl mb-4">Working Conditions</h3>
               <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-6">
-                Residents live and work in the same building, fostering a rhythm of deep focus.
-                We operate on a self-catering basis with weekly shared dinners.
+                Residents live and work in the same building.
+                The residency operates on a self-catering basis with weekly shared dinners.
               </p>
-              <LinkButton href="/facilities" variant="ghost">View detailed facilities ↗</LinkButton>
+              <LinkButton href="/facilities" variant="ghost">View Facilities</LinkButton>
             </div>
             <ul className="grid grid-cols-1 gap-4 text-xs text-[var(--text-muted)] uppercase tracking-wider">
               <li className="flex items-center gap-3 bg-[var(--bg-deep)] p-3 rounded-lg border border-white/5">
@@ -146,24 +145,24 @@ export default function Residency() {
 
         {/* Section 3: Outcomes & Documentation */}
         <section className="space-y-12">
-          <SectionHeader title="Outcomes & Documentation" subtitle="Process-led experimentation over finished products." />
+          <SectionHeader title="Outcomes & Documentation" subtitle="Process-oriented. No exhibition requirement." />
           <div className="grid md:grid-cols-3 gap-8 text-[var(--text-muted)]">
             <div className="bg-[var(--bg-panel)] p-6 rounded-xl border border-white/5">
               <h3 className="text-white font-serif mb-3">Process &gt; Product</h3>
               <p className="text-sm leading-relaxed">
-                We value experimentation. You are not required to produce a finished exhibition. We encourage prototypes and sketches.
+                There is no requirement to produce a finished exhibition. Prototypes, sketches, and works-in-progress are valid outcomes.
               </p>
             </div>
             <div className="bg-[var(--bg-panel)] p-6 rounded-xl border border-white/5">
               <h3 className="text-white font-serif mb-3">Community Moment</h3>
               <p className="text-sm leading-relaxed">
-                We ask for one moment of exchange—an artist talk, a technical workshop, or an open studio for the local community.
+                Residents are asked to contribute one moment of exchange: an artist talk, workshop, or open studio for the local community.
               </p>
             </div>
             <div className="bg-[var(--bg-panel)] p-6 rounded-xl border border-white/5">
               <h3 className="text-white font-serif mb-3">Archival Support</h3>
               <p className="text-sm leading-relaxed">
-                We provide professional photographic documentation of your work-in-progress, ensuring you leave with high-quality assets.
+                Photographic documentation of work-in-progress is provided on request.
               </p>
             </div>
           </div>
@@ -172,13 +171,10 @@ export default function Residency() {
         {/* Section 4: CTA Block */}
         <section className="bg-[var(--bg-panel)] rounded-3xl p-16 md:p-24 border border-[var(--brand)]/20 text-center space-y-10">
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-serif text-white">Interested in applying?</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-white">Applications</h2>
             <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
-              We review applications on a rolling basis. Funding support letters are available for grant applications.
+              Applications are reviewed on a rolling basis. Invitation letters are available for grant applications.
             </p>
-              <p className="text-sm text-[var(--text-muted)] text-center mb-2">
-                Applications are reviewed on a rolling basis. Selected residents are contacted directly.
-              </p>
           </div>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <LinkButton href="/apply" variant="primary">Apply</LinkButton>
