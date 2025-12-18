@@ -158,6 +158,41 @@ export default function Mission() {
                 </div>
             </section>
 
+
+            {/* Founders' Vision: A Legacy of Innovation */}
+            <section className="space-y-8 pt-16 border-t border-white/10">
+                <div className="max-w-3xl">
+                    <h2 className="text-3xl font-light text-white mb-2">Founders' Vision: A Legacy of Innovation</h2>
+                    <p className="text-lg opacity-80">From Private Studio to European Hub</p>
+                </div>
+
+                <div className="prose prose-invert max-w-none opacity-90 leading-relaxed space-y-6">
+                    <p>
+                        Founded in 2002, Ateliér Libušín began as a private sanctuary for artistic experimentation in the heart of Central Bohemia.
+                        Over two decades, what started as a personal atelier has naturally evolved into a collaborative crossroads where heritage architecture
+                        meets the digital frontier. As we move through 2025, our mission is to formalize this evolution, transitioning from an informal
+                        artist-led initiative into a professionalized <strong>z.s. (non-profit) entity</strong> capable of supporting the next generation of international creators.
+                    </p>
+
+                    <h3 className="text-white text-xl font-normal mt-8">The Digital and Land Art Synthesis</h3>
+                    <p>
+                        Our journey reached a turning point in 2018 and 2019, through landmark collaborations with OMAi/Tagtool and visibility at Ars Electronica.
+                        These milestones proved that rural spaces can serve as high-capacity incubators for global digital innovation.
+                        By integrating high-end projection technology with the physical landscape of our orchard and pavilion, we have developed an
+                        <strong>"Adaptive Residency"</strong> model that thrives across seasons—offering deep-focus "Winter Research" and collaborative "Summer Labs".
+                    </p>
+
+                    <h3 className="text-white text-xl font-normal mt-8">Our Commitment for 2025 and Beyond</h3>
+                    <p>
+                        As we align our operations with the <strong>New European Bauhaus</strong> and the <strong>European Green Deal</strong>,
+                        Ateliér Libušín stands as a "Qualified Host" dedicated to sustainable, inclusive cultural mobility. We are committed to maintaining a
+                        "35-minute Green Link" to Prague, prioritizing public transport, and fostering a "Slow Travel" ethos that respects both
+                        the artist’s pace and the local ecology. Our goal is to ensure that every project incubated here not only reaches a global stage
+                        but also enriches the social and cultural fabric of the Libušín community.
+                    </p>
+                </div>
+            </section>
+
         </article>
     )
 }
