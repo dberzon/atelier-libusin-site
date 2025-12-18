@@ -4,6 +4,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import SectionHeader from '../../components/ui/SectionHeader'
+import LinkButton from '../../components/ui/LinkButton'
 
 export const metadata: Metadata = { title: 'Apply — Ateliér Libušín' }
 
@@ -115,18 +116,22 @@ export default function Apply() {
         <Script id="tally-js" src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
       </section>
 
-      {/* Footer Info */}
-      <section className="grid md:grid-cols-2 gap-12 pt-12 border-t border-white/10 text-center md:text-left">
-        <div>
-          <h3 className="font-serif text-white text-xl mb-4">Response Time</h3>
-          <p className="text-[var(--text-muted)]">We usually respond within 7 days. If your proposal is time-sensitive, please indicate this in the project description.</p>
-        </div>
-        <div>
-          <h3 className="font-serif text-white text-xl mb-4">General Inquiries</h3>
-          <p className="text-[var(--text-muted)]">
-            For questions outside the residency application process:<br />
-            <a href="mailto:berzon73@gmail.com" className="text-[var(--brand)] hover:underline mt-2 inline-block">berzon73@gmail.com</a>
+      {/* Response Time Info */}
+      <div className="bg-[var(--bg-deep)] p-6 rounded-xl border border-white/5 text-center text-sm text-[var(--text-muted)]">
+        We usually respond within 7 days. If your proposal is time-sensitive, please indicate this in the project description.
+      </div>
+
+      {/* CTA Block */}
+      <section className="bg-[var(--bg-panel)] rounded-3xl p-16 md:p-24 border border-[var(--brand)]/20 text-center space-y-10 my-12">
+        <div className="space-y-4">
+          <h2 className="text-4xl font-serif text-white">Need help with your application?</h2>
+          <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
+            For questions about the residency process, grant alignment, or visiting the site.
           </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <LinkButton href="mailto:berzon73@gmail.com" variant="primary">Send Email</LinkButton>
+          <LinkButton href="/contact" variant="ghost">View Contact Page</LinkButton>
         </div>
       </section>
 

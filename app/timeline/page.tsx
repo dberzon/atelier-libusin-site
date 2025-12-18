@@ -1,4 +1,5 @@
 import SectionHeader from '../../components/ui/SectionHeader'
+import LinkButton from '../../components/ui/LinkButton'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = { title: 'Timeline — Ateliér Libušín' }
@@ -13,7 +14,7 @@ export default function Timeline() {
     ]
 
     return (
-        <div className="container max-w-4xl mx-auto px-6 py-24 space-y-16">
+        <div className="container max-w-4xl mx-auto px-6 py-24 space-y-24">
             <SectionHeader
                 eyebrow="History"
                 title="Our Timeline"
@@ -31,7 +32,7 @@ export default function Timeline() {
                             <span className="text-3xl font-serif text-[var(--brand)] font-bold mb-1 md:mb-0 w-24 flex-shrink-0">{m.year}</span>
                             <div>
                                 <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[var(--brand)] transition-colors">{m.title}</h3>
-                                <p className="text-[var(--text-muted)] leading-relaxed text-sm opacity-80 group-hover:opacity-100 transition-opacity">
+                                <p className="text-sm text-[var(--text-muted)] leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
                                     {m.desc}
                                 </p>
                             </div>
@@ -39,6 +40,20 @@ export default function Timeline() {
                     </div>
                 ))}
             </div>
+
+            {/* CTA Block */}
+            <section className="bg-[var(--bg-panel)] rounded-3xl p-16 border border-[var(--brand)]/20 text-center space-y-10 my-12">
+                <div className="space-y-4">
+                    <h2 className="text-4xl font-serif text-white">Inspired by our journey?</h2>
+                    <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
+                        Join us in writing the next chapter of Ateliér Libušín.
+                    </p>
+                </div>
+                <div className="flex flex-col md:flex-row gap-6 justify-center">
+                    <LinkButton href="/apply" variant="primary">Start Application</LinkButton>
+                    <LinkButton href="/mission" variant="ghost">Learn More</LinkButton>
+                </div>
+            </section>
         </div>
     )
 }

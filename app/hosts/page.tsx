@@ -50,13 +50,19 @@ export default function Hosts() {
 
       </div>
 
-      {/* Joint Statement */}
-      <div className="text-center max-w-2xl mx-auto border-t border-white/5 pt-12">
-        <p className="text-lg text-[var(--text-main)] italic opacity-80 mb-8">
-          "We founded Ateliér Libušín to create the space we always needed—grounded in nature but connected to the digital frontier."
-        </p>
-        <LinkButton href="/contact" variant="ghost">Get in Touch</LinkButton>
-      </div>
+      {/* CTA Block */}
+      <section className="bg-[var(--bg-panel)] rounded-3xl p-16 border border-[var(--brand)]/20 text-center space-y-10 my-12">
+        <div className="space-y-4">
+          <h2 className="text-4xl font-serif text-white">Have questions for the team?</h2>
+          <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
+            We are happy to discuss custom residency needs or technical requirements.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <LinkButton href="mailto:info@atelierlibusin.cz" variant="primary">Send Email</LinkButton>
+          <LinkButton href="/contact" variant="ghost">Go to Contact</LinkButton>
+        </div>
+      </section>
 
     </div>
   )

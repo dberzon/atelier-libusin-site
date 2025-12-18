@@ -61,11 +61,16 @@ export default function Facilities() {
       </div>
 
       {/* CTA Block */}
-      <section className="bg-[var(--bg-panel)] rounded-2xl p-12 border border-white/5 text-center">
-        <h2 className="text-3xl font-serif text-white mb-8">Interested in working here?</h2>
+      <section className="bg-[var(--bg-panel)] rounded-3xl p-16 md:p-24 border border-[var(--brand)]/20 text-center space-y-10 my-12">
+        <div className="space-y-4">
+          <h2 className="text-4xl font-serif text-white">Interested in working here?</h2>
+          <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
+            Our facilities are designed to support a range of artistic practices, from digital experimentation to traditional land art.
+          </p>
+        </div>
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           <LinkButton href="/apply" variant="primary">Apply Now</LinkButton>
-          <LinkButton href="/residency" variant="secondary">Explore Residency</LinkButton>
+          <LinkButton href="/residency" variant="ghost">Explore Residency</LinkButton>
         </div>
       </section>
 

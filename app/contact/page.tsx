@@ -40,11 +40,12 @@ export default function Contact() {
             </div>
 
             {/* Application CTA */}
-            <section className="bg-[var(--bg-panel)] rounded-2xl p-12 border border-white/5 text-center space-y-8">
-                <div>
-                    <h2 className="text-3xl font-serif text-white mb-4">Applying for Residency?</h2>
-                    <p className="text-[var(--text-muted)] max-w-xl mx-auto">
-                        We accept applications exclusively through our online portal. Please do not send portfolios via email.
+            <section className="bg-[var(--bg-panel)] rounded-3xl p-16 border border-[var(--brand)]/20 text-center space-y-10 my-12">
+                <div className="space-y-4">
+                    <h2 className="text-4xl font-serif text-white">Applying for Residency?</h2>
+                    <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
+                        We accept applications exclusively through our online portal.
+                        Please review the program criteria before submitting.
                     </p>
                 </div>
                 <div className="flex justify-center">

@@ -42,9 +42,12 @@ export default function Mission() {
                 {/* Governance Statement */}
                 <section className="bg-[var(--bg-panel)] border-l-4 border-[var(--brand)] p-8 md:p-12 rounded-r-2xl border-y border-r border-white/5">
                     <h2 className="text-2xl font-serif text-white mb-4">Governance Structure</h2>
-                    <p className="text-[var(--text-muted)] leading-relaxed">
-                        Ateliér Libušín is transitioning to a <strong>zapsaný spolek (z.s.)</strong> structure to better align with our non-profit mission.
-                        This restructuring reflects our commitment to transparency, democratic governance, and long-term sustainability as a cultural institution.
+                    <p className="text-[var(--text-muted)] leading-relaxed mb-4">
+                        Ateliér Libušín is transitioning to a <strong>zapsaný spolek (z.s.)</strong> structure.
+                        This better aligns with our non-profit mission and institutional transparency.
+                    </p>
+                    <p className="text-[var(--text-muted)] leading-relaxed text-sm opacity-80">
+                        This restructuring reflects our commitment to democratic governance and long-term sustainability as a cultural crossroads.
                     </p>
                 </section>
 
@@ -55,19 +58,19 @@ export default function Mission() {
                         <div className="space-y-3">
                             <h3 className="text-lg font-serif text-white border-b border-white/10 pb-2">Rural Revitalisation</h3>
                             <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                                Challenging the centralization of culture by bringing world-class artists to a small town. We use art as a tool for "Social Scaffolding."
+                                Bringing world-class artists to a small town. We use art as a tool for "Social Scaffolding."
                             </p>
                         </div>
                         <div className="space-y-3">
                             <h3 className="text-lg font-serif text-white border-b border-white/10 pb-2">Community Exchange</h3>
                             <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                                Facilitating genuine cross-border exchange between residents and the local population through open studios, workshops, and oral history recording.
+                                Genuine cross-border exchange between residents and locals via workshops and oral history.
                             </p>
                         </div>
                         <div className="space-y-3">
                             <h3 className="text-lg font-serif text-white border-b border-white/10 pb-2">Ecological Awareness</h3>
                             <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                                Promoting "Slow Tourism" and low-carbon mobility. Our enclosed orchards serve as a living lab for sustainable artistic practices.
+                                Promoting "Slow Tourism" and low-carbon mobility. Living labs for sustainable artistic practices.
                             </p>
                         </div>
                     </div>
@@ -76,13 +79,14 @@ export default function Mission() {
                 {/* Founders' Vision */}
                 <section className="bg-[var(--bg-deep)] p-8 md:p-12 rounded-2xl border border-white/10">
                     <SectionHeader title="Founding Vision" className="mb-6" />
-                    <div className="prose prose-invert max-w-none text-[var(--text-muted)] font-light">
-                        <p className="mb-4">
-                            Founded in 2002, Ateliér Libušín began as a private sanctuary for experimentation. Over two decades, it has evolved into a collaborative crossroads for digital and land art.
+                    <div className="prose prose-invert max-w-none text-[var(--text-muted)] font-light space-y-4">
+                        <p>
+                            Founded in 2002, Ateliér Libušín began as a private sanctuary for experimentation.
+                            It has evolved into a collaborative crossroads for digital and land art.
                         </p>
                         <p>
-                            Our landmark collaborations with OMAi/Tagtool (2018-2019) proved that rural spaces can serve as high-capacity incubators for global digital innovation.
-                            Today, we stand as a "Qualified Host" dedicated to sustainable cultural mobility.
+                            Our collaborations with OMAi/Tagtool proved that rural spaces can serve as incubators for global innovation.
+                            Today, we stand as a host dedicated to sustainable cultural mobility.
                         </p>
                     </div>
                 </section>
@@ -90,10 +94,10 @@ export default function Mission() {
             </div>
 
             {/* 4. CTA Block */}
-            <section className="bg-[var(--bg-panel)] rounded-2xl p-12 border border-white/5 text-center space-y-8">
-                <div>
-                    <h2 className="text-3xl font-serif text-white mb-4">Join Our Mission</h2>
-                    <p className="text-[var(--text-muted)] max-w-xl mx-auto">
+            <section className="bg-[var(--bg-panel)] rounded-3xl p-16 border border-[var(--brand)]/20 text-center space-y-10 my-12">
+                <div className="space-y-4">
+                    <h2 className="text-4xl font-serif text-white">Join Our Mission</h2>
+                    <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
                         We welcome partnerships with cultural institutions, grant bodies, and academic researchers.
                     </p>
                 </div>

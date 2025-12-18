@@ -1,6 +1,7 @@
 import GalleryGrid, { GalleryItem } from '../../components/GalleryGrid'
 import type { Metadata } from 'next'
 import SectionHeader from '../../components/ui/SectionHeader'
+import LinkButton from '../../components/ui/LinkButton'
 
 export const metadata: Metadata = { title: 'Gallery — Ateliér Libušín' }
 
@@ -13,7 +14,7 @@ const items: GalleryItem[] = [
 
 export default function GalleryPage() {
   return (
-    <div className="container max-w-7xl mx-auto px-6 py-24 space-y-16">
+    <div className="container max-w-6xl mx-auto px-6 py-24 space-y-24">
       <SectionHeader
         eyebrow="Archive"
         title="Gallery"
@@ -25,9 +26,22 @@ export default function GalleryPage() {
         <GalleryGrid items={items} />
       </div>
 
-      <p className="text-center text-sm opacity-40 font-mono">
+      <div className="text-center text-sm opacity-40 font-mono">
         Photo use by permission; please credit Ateliér Libušín or the named photographer.
-      </p>
+      </div>
+
+      <section className="bg-[var(--bg-panel)] rounded-3xl p-16 border border-[var(--brand)]/20 text-center space-y-10 my-12">
+        <div className="space-y-4">
+          <h2 className="text-4xl font-serif text-white">Inspired by what you see?</h2>
+          <p className="text-[var(--text-muted)] max-w-xl mx-auto text-lg">
+            We are always looking for artists who push the boundaries of technology and landscape.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <LinkButton href="/apply" variant="primary">Apply to the Program</LinkButton>
+          <LinkButton href="/residency" variant="ghost">Residency Details</LinkButton>
+        </div>
+      </section>
     </div>
   )
 }
