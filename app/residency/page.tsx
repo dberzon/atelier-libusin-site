@@ -1,48 +1,67 @@
 
 
 import type { Metadata } from 'next'
+import SectionHeader from '../../components/ui/SectionHeader'
+import FeatureCard from '../../components/ui/FeatureCard'
 
 export const metadata: Metadata = { title: 'Residency — Ateliér Libušín' }
 
 export default function Residency() {
   return (
-    <article className="prose max-w-none">
-      <h1>Residency Program</h1>
-      <p className="lead">
-        Ateliér Libušín offers an <strong>Adaptive Residency</strong> model, shifting its focus with the seasons to maximize our facility's unique potential.
-      </p>
+    <div className="container max-w-6xl mx-auto px-6 py-24 space-y-24">
+      {/* Header */}
+      <SectionHeader
+        eyebrow="Program"
+        title="Adaptive Residency Model"
+        subtitle="Shifting focus with the seasons to maximize our unique potential."
+        align="center"
+      />
 
-      <section className="grid md:grid-cols-2 gap-8 not-prose my-12">
-        <div className="card p-6 border-t-4 border-t-[#00f0ff]">
-          <h3 className="text-xl font-bold text-white mb-2">❄️ Winter Research</h3>
-          <p className="text-sm opacity-80 uppercase tracking-widest mb-4">Nov — Mar • Studio Focus</p>
-          <p className="text-sm opacity-90">
-            Dedicated to <strong>deep work, writing, and coding</strong>. Residents have 24/7 access to the heated indoor atelier.
-            Ideal for digital artists, writers, and composers requiring isolation and high-speed infrastructure.
-          </p>
-        </div>
-        <div className="card p-6 border-t-4 border-t-[#ff0055]">
-          <h3 className="text-xl font-bold text-white mb-2">☀️ Summer Open Air</h3>
-          <p className="text-sm opacity-80 uppercase tracking-widest mb-4">Apr — Oct • Pavilion & Garden</p>
-          <p className="text-sm opacity-90">
-            Focused on <strong>Land Art, Projection Mapping, and Performance</strong>.
-            Expands into the outdoor pavilion and orchard. Perfect for large-scale experimentation and community interventions.
-          </p>
+      {/* Seasonal Block */}
+      <section className="grid md:grid-cols-2 gap-8">
+        <FeatureCard
+          title="Winter Research (Nov — Mar)"
+          description="Dedicated to deep work, writing, and coding. 24/7 access to heated atelier. Ideal for digital artists and composers requiring isolation."
+          href="/apply"
+          className="border-t-4 border-t-[var(--brand)]"
+          icon={<span className="text-2xl">❄️</span>}
+        />
+        <FeatureCard
+          title="Summer Open Air (Apr — Oct)"
+          description="Focused on Land Art, Projection Mapping, and Performance. Expands into the outdoor pavilion and orchard for large-scale experimentation."
+          href="/apply"
+          className="border-t-4 border-t-[var(--accent)]"
+          icon={<span className="text-2xl">☀️</span>}
+        />
+      </section>
+
+      {/* Facilities Info */}
+      <section className="bg-[var(--bg-panel)] rounded-2xl p-8 md:p-12 border border-white/5">
+        <h2 className="text-3xl font-light text-white mb-8 font-serif">Core Facilities</h2>
+        <div className="grid md:grid-cols-3 gap-8 text-[var(--text-muted)]">
+          <div>
+            <h3 className="text-white font-bold mb-2">The Atelier</h3>
+            <p>50m² heated studio, projection walls, basic sound system.</p>
+          </div>
+          <div>
+            <h3 className="text-white font-bold mb-2">Accommodation</h3>
+            <p>Private room (2p) or Shared Loft (6p). 8 certified beds.</p>
+          </div>
+          <div>
+            <h3 className="text-white font-bold mb-2">The Orchard</h3>
+            <p>2000m² enclosed garden for outdoor installations.</p>
+          </div>
         </div>
       </section>
 
-      <h2>Core Facilities</h2>
-      <ul>
-        <li><strong>The Atelier:</strong> 50m² heated studio, projection walls, basic sound system.</li>
-        <li><strong>Accommodation:</strong> Private room (up to 2p) or Shared Loft (up to 6p). Official capacity: 8 certified beds.</li>
-        <li><strong>The Orchard:</strong> 2000m² enclosed garden for outdoor installations.</li>
-      </ul>
-
-      <h2>Fees & Support</h2>
-      <p>
-        <strong>Fees by arrangement.</strong> We act as a project partner for Visegrad Fund and Creative Europe applications.
-        We can issue formal Letters of Invitation for grant-seeking artists.
-      </p>
-    </article>
+      {/* Fees / Support */}
+      <section className="text-center max-w-2xl mx-auto">
+        <h2 className="text-2xl font-light text-white mb-4 font-serif">Fees & Support</h2>
+        <p className="text-[var(--text-muted)] text-lg mb-8">
+          Fees by arrangement. We act as a project partner for Visegrad Fund and Creative Europe applications.
+          Formal Letters of Invitation available.
+        </p>
+      </section>
+    </div>
   )
 }

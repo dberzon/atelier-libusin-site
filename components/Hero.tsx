@@ -18,14 +18,14 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl px-6 flex flex-col items-center">
 
-        {/* H1: Strong sentence, not organization name */}
+        {/* H1: Mission Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white drop-shadow-2xl mb-8 leading-[1.0] max-w-[15ch]">
-          A Sanctuary for Digital & Land Art
+          Stewarding a Rural Avant-Garde
         </h1>
 
-        {/* Subheading: 1-2 lines */}
+        {/* Subheading: Mission tagline */}
         <p className="text-xl md:text-2xl text-[var(--text-main)] font-light max-w-2xl mx-auto mb-12 leading-relaxed opacity-90">
-          An adaptive residency program bridging heritage architecture with the digital frontier.
+          Where ecological grounding meets digital innovation.
         </p>
 
         {/* CTA Row */}
